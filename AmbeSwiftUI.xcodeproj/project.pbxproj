@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08014103296F760000F2CDDD /* TextsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08014102296F760000F2CDDD /* TextsSwiftUIView.swift */; };
+		08014105296F765800F2CDDD /* ExercisesSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08014104296F765800F2CDDD /* ExercisesSwiftUIView.swift */; };
+		08014109296F77FD00F2CDDD /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08014108296F77FD00F2CDDD /* Words.swift */; };
+		0801410B296F81F600F2CDDD /* FullTextSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */; };
+		08081D0D2968C7ED00B91334 /* EmbedSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */; };
+		0883A4662970CC4900CB6CC5 /* WordsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */; };
 		0885AF6E29621E860058957F /* AmbeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */; };
 		0885AF7029621E860058957F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6F29621E860058957F /* ContentView.swift */; };
 		0885AF7229621E880058957F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0885AF7129621E880058957F /* Assets.xcassets */; };
 		0885AF7529621E880058957F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0885AF7429621E880058957F /* Preview Assets.xcassets */; };
+		0885AF7C29621EA40058957F /* Modul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF7B29621EA40058957F /* Modul.swift */; };
+		0885AF7E29624A120058957F /* TopicsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */; };
+		08F419942971EDB7003B38A4 /* QuizSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F419932971EDB7003B38A4 /* QuizSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08014102296F760000F2CDDD /* TextsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsSwiftUIView.swift; sourceTree = "<group>"; };
+		08014104296F765800F2CDDD /* ExercisesSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesSwiftUIView.swift; sourceTree = "<group>"; };
+		08014108296F77FD00F2CDDD /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTextSwiftUIView.swift; sourceTree = "<group>"; };
+		08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedSwiftUIView.swift; sourceTree = "<group>"; };
+		0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSwiftUIView.swift; sourceTree = "<group>"; };
 		0885AF6A29621E860058957F /* AmbeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbeSwiftUIApp.swift; sourceTree = "<group>"; };
 		0885AF6F29621E860058957F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0885AF7129621E880058957F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0885AF7429621E880058957F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0885AF7B29621EA40058957F /* Modul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modul.swift; sourceTree = "<group>"; };
+		0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsSwiftUIView.swift; sourceTree = "<group>"; };
+		08F419932971EDB7003B38A4 /* QuizSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +70,16 @@
 			isa = PBXGroup;
 			children = (
 				0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */,
+				0885AF7B29621EA40058957F /* Modul.swift */,
+				08014108296F77FD00F2CDDD /* Words.swift */,
 				0885AF6F29621E860058957F /* ContentView.swift */,
+				08014104296F765800F2CDDD /* ExercisesSwiftUIView.swift */,
+				0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */,
+				08F419932971EDB7003B38A4 /* QuizSwiftUIView.swift */,
+				08014102296F760000F2CDDD /* TextsSwiftUIView.swift */,
+				0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */,
+				0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */,
+				08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */,
 				0885AF7129621E880058957F /* Assets.xcassets */,
 				0885AF7329621E880058957F /* Preview Content */,
 			);
@@ -137,8 +164,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08014105296F765800F2CDDD /* ExercisesSwiftUIView.swift in Sources */,
+				0801410B296F81F600F2CDDD /* FullTextSwiftUIView.swift in Sources */,
 				0885AF7029621E860058957F /* ContentView.swift in Sources */,
+				08014103296F760000F2CDDD /* TextsSwiftUIView.swift in Sources */,
+				08014109296F77FD00F2CDDD /* Words.swift in Sources */,
+				0885AF7C29621EA40058957F /* Modul.swift in Sources */,
 				0885AF6E29621E860058957F /* AmbeSwiftUIApp.swift in Sources */,
+				0885AF7E29624A120058957F /* TopicsSwiftUIView.swift in Sources */,
+				08F419942971EDB7003B38A4 /* QuizSwiftUIView.swift in Sources */,
+				0883A4662970CC4900CB6CC5 /* WordsSwiftUIView.swift in Sources */,
+				08081D0D2968C7ED00B91334 /* EmbedSwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

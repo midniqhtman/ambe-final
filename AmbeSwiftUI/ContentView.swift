@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let moduls = Topic.getTopics()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            NavigationView {
+                List(moduls) { modul in
+                    NavigationLink(destination: TopicsSwiftUI(topic: modul) ) {
+                        Text("Урок" +  " \(modul.id + 1)." + " " + modul.title)
+                            .foregroundColor(.blue)
+                            .navigationBarTitle("Beginner's course")
+                    }
+                }
+                .listStyle(.plain)
+            }
+            .navigationBarHidden(true)
+            .tabItem {
+                Label("Lessons", systemImage: "video")
+            }
+            TextsSwiftUIView()
+                .tabItem {
+                    Label("Texts", systemImage: "book")
+                }
+            ExercisesSwiftUIView()
+                .tabItem {
+                    Label("Exercise", systemImage: "pencil")
+                }
         }
-        .padding()
     }
 }
 
@@ -24,3 +44,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
