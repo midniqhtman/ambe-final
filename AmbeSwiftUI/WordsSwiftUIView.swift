@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WordsSwiftUIView: View {
     @State private var goesToDetail: Bool = false
+    @State private var isPresented = false
     let words: [String : String]
     var body: some View {
         NavigationView {
@@ -23,22 +24,24 @@ struct WordsSwiftUIView: View {
                         }
                     }
                 Spacer()
-                NavigationLink(destination: QuizSwiftUIView(quizWords: words), isActive: $goesToDetail) {
                     Button(action: startWords) {
                         Text("Start")
                             .frame(width: 100, height: 50)
                             .foregroundColor(.white)
                             .background(Color.orange)
                             .clipShape(Capsule())
-                    }
+                    }.fullScreenCover(isPresented: $isPresented) {
+                        QuizSwiftUIView(quizWords: words)
+                    
                 }
             }
             .navigationTitle("Learn the words, bro")
         }
     }
-    private func startWords() {
+    func startWords() {
+        isPresented.toggle()
         goesToDetail = true
-        }
+    }
     }
 
 
