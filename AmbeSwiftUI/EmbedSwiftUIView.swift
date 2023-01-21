@@ -9,8 +9,6 @@ import SwiftUI
 import WebKit
 
 struct EmbedSwiftUIView: View {
-    
-    
     var body: some View {
         EmbedFrameView(topic: Topic.getTopics().randomElement()!)
     }

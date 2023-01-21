@@ -60,10 +60,6 @@ struct EmbedFrameView: View {
                             .cornerRadius(20)
                     }
                 }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 15)
-                        .stroke(.cyan, lineWidth: 6)
-                )
                 .cornerRadius(15)
             }
         }

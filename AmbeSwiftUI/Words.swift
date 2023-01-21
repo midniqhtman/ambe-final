@@ -15,8 +15,10 @@ struct Words: Identifiable {
     
     static func getWords() -> [Words] {
         [
-            Words(title: "family", theme: Themes().family, id: 0),
-            Words(title: "days of the weee", theme: Themes().daysOfTheWeek, id: 1)
+            Words(title: "Семья", theme: Themes().family, id: 0),
+            Words(title: "Дни недели", theme: Themes().daysOfTheWeek, id: 1),
+            Words(title: "Первые глаголы", theme: Themes().firstVerbs, id: 2),
+            Words(title: "Прилагательные", theme: Themes().adjectives, id: 3)
         ]
     }
 }
@@ -26,7 +28,13 @@ struct Themes {
                 "Father": "Отец",
                 "Mother": "Мать",
                 "Son": "Сын",
-                "Daughter": "Дочь"
+                "Daughter": "Дочь",
+                "Grandfather": "Дедушка",
+                "Grandmother": "Бабушка",
+                "Sister": "Сестра",
+                "Brother": "Брат",
+                "Wife": "Жена",
+                "Husband": "Муж"
                  ]
     let daysOfTheWeek = [
                 "Monday": "Понедельник",
@@ -37,6 +45,40 @@ struct Themes {
                 "Saturday": "Суббота",
                 "Sunday": "Воскресенье"
                         ]
+    let firstVerbs = [
+                "Like": "Нравиться",
+                "Speak": "Говорить",
+                "Want": "Хотеть",
+                "Need": "Нуждаться",
+                "Have": "Иметь",
+                "Work": "Работать",
+                "Live": "Жить",
+                "Go": "Идти",
+                "Eat": "Кушать",
+                "Drink": "Пить",
+                "Play": "Играть",
+                "Read": "Читать",
+                "Help": "Помогать",
+                "Study": "Учиться",
+                "Watch": "Смотреть",
+                "Listen": "Слушать",
+                "Remember": "Помнить",
+                "Get": "Получать",
+                "Send": "Отправлять",
+                "Love": "Любить"
+                 ]
+    let adjectives = [
+                "Smart": "Умный",
+                "Strong": "Сильный",
+                "Tall": "Высокий",
+                "Dark": "Темный",
+                "Bright": "Яркий",
+                "Hungry": "Голодный",
+                "Angry": "Злой",
+                "Happy": "Счастливый",
+                "Tired": "Уставший",
+                "Fat": "Толстый"
+                 ]
 }
 
 struct Texts: Identifiable {

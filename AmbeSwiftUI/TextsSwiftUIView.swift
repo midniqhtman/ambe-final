@@ -11,10 +11,15 @@ struct TextsSwiftUIView: View {
     var texts = Texts.getTexts()
     
     var body: some View {
-        VStack {
             NavigationView {
+                VStack {
+                    EmbedView(videoID: "l9updbL58xY")
+                        .cornerRadius(20)
+                        .frame(height: 300)
+                        .padding()
+                        
                 List(texts) { text in
-                    NavigationLink(destination: FullTextSwiftUIView(text: text.mainText.rawValue)) {
+                    NavigationLink(destination: FullTextSwiftUIView(text: text)) {
                             Text(text.title)
                     }
                 }
