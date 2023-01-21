@@ -32,7 +32,6 @@ struct QuizSwiftUI: View {
     @State var valueWord: String
     @State var cardWord: String
     
-    
   var body: some View {
         VStack {
             Button("show translation") {
@@ -54,40 +53,26 @@ struct QuizSwiftUI: View {
             
             ZStack {
                 ForEach(words.sorted(by: <), id: \.key) { keyWord in
-                    Rectangle()
+                    CardSwiftUI(stuff: stuff, indexOfSwipedCard: 0)
                         .onTapGesture {
                             flipCard()
                             translateIsShow.toggle()
                             setupCard()
                         }.disabled(quizIsFinished)
                     
-                        .frame(width: 300, height:200)
+                        .frame(width: 400, height:300)
                         .cornerRadius(20)
                         .foregroundColor(color)
-                        .shadow(color: .gray, radius: 20)
-                    Text(stuff.cardWord)
+                        .shadow(color: .gray, radius: 4)
                         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
                         .bold()
                         .font(.largeTitle)
                         .foregroundColor(.white)
-                        .shadow(color: .white, radius: 20)
+                        .shadow(color: .white, radius: 4)
                 }
+                .offset(x: offset.width, y: offset.height * 0.4)
+                .rotationEffect(.degrees(Double(offset.width / 40)))
             }
-            .offset(x: offset.width, y: offset.height * 0.4)
-            .rotationEffect(.degrees(Double(offset.width / 40)))
-            .gesture(
-            DragGesture()
-                .onChanged { gesture in
-                    offset = gesture.translation
-                    withAnimation {
-                        changeColor(width: offset.width)
-                    }
-                } .onEnded { _ in
-                    withAnimation {
-                        swipeCard(width: offset.width)
-                    }
-                }
-            )
 
             .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
             
@@ -104,28 +89,6 @@ struct QuizSwiftUI: View {
         }
     }
     
-    func swipeCard(width: CGFloat) {
-        switch width {
-        case -500...(-150):
-            offset = CGSize(width: -500, height: 0)
-        case 150...500:
-            offset = CGSize(width: 500, height: 0)
-        default:
-            offset = .zero
-        }
-    }
-    
-    func changeColor(width: CGFloat) {
-        switch width {
-        case -500...(-80):
-            color = .red
-        case 80...500:
-            color = .green
-        default:
-            color = .cyan
-        }
-    }
-     
     func flipCard() {        
         withAnimation(Animation.linear(duration: 0.3)) {
             cardRotation += 180
@@ -159,6 +122,7 @@ struct QuizSwiftUI: View {
             stuff.cardWord = keyWord
         }
     }
+    
     
     
     struct QuizSwiftUI_Previews: PreviewProvider {

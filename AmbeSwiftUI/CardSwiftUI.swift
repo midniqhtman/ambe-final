@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct CardSwiftUI: View {
-    var word: String
-    
+    let words: [String : String]
+
+
+    @StateObject var stuff = Stuff()
+   
     @State var offset = CGSize.zero
     @State var color = Color.cyan
+    @State var indexOfSwipedCard = 0
+    @State var cardRotation = 0.0
+    @State var contentRotation = 0.0
+
+    @State var cardIsSwiped = false
     
     var body: some View {
         ZStack {
             Rectangle()
-            
-            
                 .frame(width: 300, height:200)
                 .cornerRadius(20)
                 .foregroundColor(color)
-                .shadow(color: .gray, radius: 20)
-            Text(word)
-                .rotation3DEffect(.degrees(CGFloat(0.0)), axis: (x: 0, y: 1, z: 0))
+                .shadow(color: .gray, radius: 4)
+            Text(stuff.cardWord)
+                .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
                 .bold()
                 .font(.largeTitle)
                 .foregroundColor(.white)
@@ -50,8 +56,10 @@ struct CardSwiftUI: View {
         switch width {
         case -500...(-150):
             offset = CGSize(width: -500, height: 0)
+            indexOfSwipedCard += 1
         case 150...500:
             offset = CGSize(width: 500, height: 0)
+            indexOfSwipedCard += 1
         default:
             offset = .zero
         }
@@ -72,6 +80,6 @@ struct CardSwiftUI: View {
 
 struct CardSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        CardSwiftUI(word: "The word")
+        CardSwiftUI()
     }
 }
