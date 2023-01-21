@@ -20,6 +20,7 @@
 		0885AF7529621E880058957F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0885AF7429621E880058957F /* Preview Assets.xcassets */; };
 		0885AF7C29621EA40058957F /* Modul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF7B29621EA40058957F /* Modul.swift */; };
 		0885AF7E29624A120058957F /* TopicsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */; };
+		08E83FAC297C851400F74DF2 /* CardSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E83FAB297C851400F74DF2 /* CardSwiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		0885AF7429621E880058957F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0885AF7B29621EA40058957F /* Modul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modul.swift; sourceTree = "<group>"; };
 		0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsSwiftUIView.swift; sourceTree = "<group>"; };
+		08E83FAB297C851400F74DF2 /* CardSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSwiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */,
 				08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */,
 				0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */,
+				08E83FAB297C851400F74DF2 /* CardSwiftUI.swift */,
 				0885AF7129621E880058957F /* Assets.xcassets */,
 				0885AF7329621E880058957F /* Preview Content */,
 			);
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08014105296F765800F2CDDD /* ExercisesSwiftUIView.swift in Sources */,
+				08E83FAC297C851400F74DF2 /* CardSwiftUI.swift in Sources */,
 				0801410B296F81F600F2CDDD /* FullTextSwiftUIView.swift in Sources */,
 				0885AF7029621E860058957F /* ContentView.swift in Sources */,
 				08014103296F760000F2CDDD /* TextsSwiftUIView.swift in Sources */,
