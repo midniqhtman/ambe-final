@@ -35,11 +35,7 @@ struct CardSwiftUI: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .onTapGesture {
-                    flipCard()
-                    translateIsShow.toggle()
-                    setupCard()
-                }.disabled(quizIsFinished)
+                .disabled(quizIsFinished)
                 .frame(width: 300, height:200)
                 .cornerRadius(20)
                 .foregroundColor(color)
@@ -48,17 +44,11 @@ struct CardSwiftUI: View {
                 .bold()
                 .font(.largeTitle)
                 .foregroundColor(.white)
-                .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
                 .bold()
                 .font(.largeTitle)
                 .foregroundColor(.white)
                 .shadow(color: .white, radius: 4)
-        }                .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
-
-        .onAppear {
-            setWordsIndexes()
-            setupCard()
-        }
+        }                
         
         .offset(x: offset.width, y: offset.height * 0.4)
         .rotationEffect(.degrees(Double(offset.width / 40)))
@@ -90,11 +80,6 @@ struct CardSwiftUI: View {
         }
     }
     
-    func nextCard() {
-            setWordsIndexes()
-            setupCard()
-    }
-    
     func changeColor(width: CGFloat) {
         switch width {
         case -500...(-150):
@@ -105,42 +90,7 @@ struct CardSwiftUI: View {
             color = .cyan
         }
     }
-    
-    func setWordsIndexes() {
-        words.sorted(by: <)
-        if indexOf < words.keys.count {
-            keyWord = Array(words.keys)[indexOf]
-            valueWord = Array(words.values)[indexOf]
-            quizIsFinished = false
-        } else {
-            indexOf = 0
-            keyWord = "Проверь себя"
-        }
-        setupCard()
-    }
-    
-    func flipCard() {
-        withAnimation(Animation.linear(duration: 0.3)) {
-            cardRotation += 180
-            isFlipped.toggle()
-        }
-        
-        withAnimation(Animation.linear(duration: 0.001)) {
-            contentRotation += 180
-            isFlipped.toggle()
-        }
-    }
-    
-    func setupCard() {
-        if translateIsShow == true {
-            stuff.cardWord = valueWord
-        } else {
-            stuff.cardWord = keyWord
-        }
-    }
-    
- 
-    }
+}
 
 
 struct CardSwiftUI_Previews: PreviewProvider {
