@@ -8,7 +8,6 @@
 import SwiftUI
 class Stuff: ObservableObject  {
     @Published var cardWord = ""
-    @Published var index = 0
 }
 
 struct CardSwiftUI: View {
@@ -26,6 +25,7 @@ struct CardSwiftUI: View {
     
     @State var quizIsFinished = false
     @State var isFlipped = false
+    @State var isSwiped = false
     @State var translateIsShow = false
     @State var indexOf = 0
     @State var keyWord: String
@@ -56,7 +56,7 @@ struct CardSwiftUI: View {
         }                .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
 
         .onAppear {
-           setWordsIndexes()
+            setWordsIndexes()
             setupCard()
         }
         
@@ -65,11 +65,12 @@ struct CardSwiftUI: View {
         .gesture(
             DragGesture()
                 .onChanged { gesture in
+                    isSwiped = true
                     offset = gesture.translation
                     withAnimation {
                         changeColor(width: offset.width)
                     }
-                } .onEnded { _ in
+                }.onEnded { _ in
                     withAnimation {
                         swipeCard(width: offset.width)
                     }
@@ -88,13 +89,19 @@ struct CardSwiftUI: View {
         }
     }
     
+    func nextCard() {
+        if isSwiped {
+            indexOf += 1
+            setWordsIndexes()
+            setupCard()
+        }
+    }
+    
     func changeColor(width: CGFloat) {
         switch width {
         case -500...(-80):
-            stuff.index += 1
             color = .red
         case 80...500:
-            stuff.index += 1
             color = .green
         default:
             color = .cyan
@@ -104,9 +111,9 @@ struct CardSwiftUI: View {
     func setWordsIndexes() {
         words.sorted(by: <)
         if indexOf < words.keys.count {
-            keyWord = Array(words.keys)[stuff.index]
-            valueWord = Array(words.values)[stuff.index]
-            stuff.index += 1
+            keyWord = Array(words.keys)[indexOf]
+            valueWord = Array(words.values)[indexOf]
+            indexOf += 1
             quizIsFinished = false
         } else {
             indexOf = 0

@@ -39,7 +39,7 @@ struct QuizSwiftUI: View {
             }
             
             ZStack {
-                ForEach(words.sorted(by: <), id: \.key) { word in
+                ForEach(words.sorted(by: <), id: \.key) { word, translation in
                     CardSwiftUI(words: words, keyWord: keyWord, valueWord: valueWord, cardWord: cardWord)
                 }
             }
