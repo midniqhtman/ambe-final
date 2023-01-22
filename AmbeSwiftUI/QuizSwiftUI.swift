@@ -40,10 +40,9 @@ struct QuizSwiftUI: View {
             
             ZStack {
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
-                    CardSwiftUI(words: words, keyWord: keyWord, valueWord: valueWord, cardWord: cardWord)
+                    CardSwiftUI(words: words, stuff: stuff, indexOf: indexOf, keyWord: keyWord, valueWord: valueWord, cardWord: cardWord)
                 }
             }
-
             
             HStack{
                 Text("Если знаешь смахни вправо").font(.title2)

@@ -70,6 +70,7 @@ struct CardSwiftUI: View {
                     withAnimation {
                         changeColor(width: offset.width)
                     }
+
                 }.onEnded { _ in
                     withAnimation {
                         swipeCard(width: offset.width)
@@ -90,18 +91,15 @@ struct CardSwiftUI: View {
     }
     
     func nextCard() {
-        if isSwiped {
-            indexOf += 1
             setWordsIndexes()
             setupCard()
-        }
     }
     
     func changeColor(width: CGFloat) {
         switch width {
-        case -500...(-80):
+        case -500...(-150):
             color = .red
-        case 80...500:
+        case 150...500:
             color = .green
         default:
             color = .cyan
@@ -113,7 +111,6 @@ struct CardSwiftUI: View {
         if indexOf < words.keys.count {
             keyWord = Array(words.keys)[indexOf]
             valueWord = Array(words.values)[indexOf]
-            indexOf += 1
             quizIsFinished = false
         } else {
             indexOf = 0
