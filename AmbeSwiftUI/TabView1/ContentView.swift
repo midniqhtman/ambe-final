@@ -35,17 +35,18 @@ struct ContentView: View {
                     .listStyle(.plain)
                 }
                 .navigationBarHidden(true)
+                
                 .tabItem {
                     Label("Lessons", systemImage: "video")
                 }
-                TextsSwiftUIView()
-                                    .tabItem {
-                                        Label("Texts", systemImage: "book")
+                    TextsSwiftUIView()
+                            .tabItem {
+                            Label("Texts", systemImage: "book")
                                     }
                                 ExercisesSwiftUIView()
                                     .tabItem {
                                         Label("Exercise", systemImage: "pencil")
-                                    }
+                                }
                             }
                         }
                     }

@@ -6,31 +6,27 @@
 //
 
 import SwiftUI
-class Stuff: ObservableObject  {
-    @Published var cardWord = ""
-}
 
 struct CardSwiftUI: View {
     let words: [String : String]
-
-    @StateObject var stuff = Stuff()
+    
+    @ObservedObject var stuff: Stuff
    
     @State var offset = CGSize.zero
     @State var color = Color.cyan
-    @State var indexOfSwipedCard = 0
     @State var cardRotation = 0.0
     @State var contentRotation = 0.0
-
     @State var cardIsSwiped = false
     
     @State var quizIsFinished = false
     @State var isFlipped = false
     @State var isSwiped = false
-    @State var translateIsShow = false
-    @State var indexOf = 0
-    @State var keyWord: String
-    @State var valueWord: String
-    @State var cardWord: String
+    @Binding var indexOf: Int
+    
+    @Binding var rightCards: Int
+    @Binding var wrongCards: Int
+
+
     
     var body: some View {
         ZStack {
@@ -48,7 +44,7 @@ struct CardSwiftUI: View {
                 .font(.largeTitle)
                 .foregroundColor(.white)
                 .shadow(color: .white, radius: 4)
-        }                
+        }                .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
         
         .offset(x: offset.width, y: offset.height * 0.4)
         .rotationEffect(.degrees(Double(offset.width / 40)))
@@ -59,13 +55,16 @@ struct CardSwiftUI: View {
                     offset = gesture.translation
                     withAnimation {
                         changeColor(width: offset.width)
-                    }
+                 }
 
                 }.onEnded { _ in
                     withAnimation {
+                        self.rightCards += 1
                         swipeCard(width: offset.width)
+                        print(rightCards)
                     }
                 }
+                
         )
     }
     
@@ -73,19 +72,30 @@ struct CardSwiftUI: View {
         switch width {
         case -500...(-150):
             offset = CGSize(width: -500, height: 0)
+            self.indexOf += 1
         case 150...500:
             offset = CGSize(width: 500, height: 0)
+            self.indexOf += 1
         default:
             offset = .zero
         }
+        
     }
     
     func changeColor(width: CGFloat) {
         switch width {
         case -500...(-150):
             color = .red
+            if isSwiped == true {
+                stuff.setWordsIndexes(words: words)
+                stuff.setupCard()
+            }
         case 150...500:
             color = .green
+            if isSwiped == true {
+                stuff.setWordsIndexes(words: words)
+                stuff.setupCard()
+            }
         default:
             color = .cyan
         }
@@ -93,8 +103,8 @@ struct CardSwiftUI: View {
 }
 
 
-struct CardSwiftUI_Previews: PreviewProvider {
-    static var previews: some View {
-        CardSwiftUI(words: ["hello": "privet"], keyWord: "da", valueWord: "net", cardWord: "danet")
-    }
-}
+//struct CardSwiftUI_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardSwiftUI(words: ["hello":"privet"], stuff: self.stuff, indexOf: self.stuff.indexOf, rightCards: self.stuff.rightCards, wrongCards: self.stuff.wrongCards)
+//    }
+//}

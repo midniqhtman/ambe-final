@@ -6,30 +6,63 @@
 //
 
 import SwiftUI
+import Combine
+
+class Stuff: ObservableObject  {
+    let objectWillChange = PassthroughSubject<Stuff, Never>()
+    @Published var cardWord = ""
+    @Published var translateIsShow = false
+    @Published var keyWord = ""
+    @Published var valueWord = ""
+    @Published var indexOf = 0
+    @Published var quizIsFinished = false
+    
+    @Published var rightCards = 0
+    @Published var wrongCards = 0
+
+    func setWordsIndexes(words: [String:String]) {
+        words.sorted(by: <)
+        if indexOf < words.keys.count {
+            keyWord = Array(words.keys)[indexOf]
+            valueWord = Array(words.values)[indexOf]
+            quizIsFinished = false
+            setupCard()
+        } else {
+            indexOf = 0
+            cardWord = "\(rightCards) правильных ответов из \(words.count)"
+        }
+    }
+    
+    func setupCard() {
+        if translateIsShow == true {
+            cardWord = valueWord
+        } else {
+            cardWord = keyWord
+        }
+        objectWillChange.send(self)
+    }
+}
+
 
 struct QuizSwiftUI: View {
     @StateObject var stuff = Stuff()
     
-    let words: [String : String]
+    @State var words: [String : String]
     
     var learnedWordsCount = 0
     
     @State var offset = CGSize.zero
     @State var color = Color.cyan
-    
-    @State var quizIsFinished = false
     @State var isFlipped = false
     @State var cardRotation = 0.0
     @State var contentRotation = 0.0
-    
-    @State var translateIsShow = false
-    @State var indexOf = 0
-    @State var keyWord: String
-    @State var valueWord: String
     @State var cardWord: String
     
     var body: some View {
         VStack {
+            Button("next") {
+                stuff.setWordsIndexes(words: words)
+            }
             HStack {
                 Image(systemName: "arrowshape.left.fill")
                     .resizable()
@@ -38,17 +71,23 @@ struct QuizSwiftUI: View {
                 Text("Если не знаешь смахни влево").font(.title2)
             }
             ZStack {
+                Text("\(stuff.rightCards) правильных ответов из \(words.count)")
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
-                    CardSwiftUI(words: words, stuff: stuff,translateIsShow: translateIsShow, indexOf: indexOf, keyWord: keyWord, valueWord: valueWord, cardWord: cardWord)
+                    CardSwiftUI(words: words,
+                                stuff: stuff,
+                                indexOf: $stuff.indexOf,
+                                rightCards: $stuff.indexOf,
+                                wrongCards: $stuff.wrongCards)
                         .onTapGesture {
+                            print(stuff.indexOf)
                         flipCard()
-                        translateIsShow.toggle()
-                        setupCard()
-                            
+                            stuff.translateIsShow.toggle()
+                            stuff.setupCard()
                     }
                         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
                         .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
                 }
+                
             }
             HStack{
                 Text("Если знаешь смахни вправо").font(.title2)
@@ -58,36 +97,15 @@ struct QuizSwiftUI: View {
                     .foregroundColor(.green)
             }
         }.onAppear {
-            setWordsIndexes()
-            setupCard()
-    }
+            stuff.setWordsIndexes(words: words)
+        }
     }
         
         func nextCard() {
-            setWordsIndexes()
-            setupCard()
+            stuff.setWordsIndexes(words: words)
+            stuff.setupCard()
         }
         
-        func setWordsIndexes() {
-            words.sorted(by: <)
-            if indexOf < words.keys.count {
-                keyWord = Array(words.keys)[indexOf]
-                valueWord = Array(words.values)[indexOf]
-                quizIsFinished = false
-            } else {
-                indexOf = 0
-                keyWord = "Проверь себя"
-            }
-            setupCard()
-        }
-        
-        func setupCard() {
-            if translateIsShow == true {
-                stuff.cardWord = valueWord
-            } else {
-                stuff.cardWord = keyWord
-            }
-        }
     func flipCard() {
         withAnimation(Animation.linear(duration: 0.3)) {
             cardRotation += 180
@@ -99,11 +117,12 @@ struct QuizSwiftUI: View {
             isFlipped.toggle()
         }
     }
+    
 }
   
     struct QuizSwiftUI_Previews: PreviewProvider {
         static var previews: some View {
-            QuizSwiftUI(words:["Zubair" : "Зубайр"], keyWord: "", valueWord: "", cardWord: "")
+            QuizSwiftUI(words:["Zubair" : "Зубайр"], cardWord: "")
         }
     }
     

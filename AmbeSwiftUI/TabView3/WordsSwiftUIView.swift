@@ -23,18 +23,14 @@ struct WordsSwiftUIView: View {
                         }
                     }
                 }
-                NavigationLink(destination: QuizSwiftUI(words: words, keyWord: "", valueWord: "", cardWord: ""), isActive: $goesToDetail) {
+                NavigationLink(destination: QuizSwiftUI(words: words, cardWord: ""), isActive: $goesToDetail) {
                     Button("StartQuiz") {
                       goesToDetail = true
-                        startQuiz()
                     }.buttonStyle(GrowingButton())
                 }
             }
         }
-    
-    func startQuiz() {
-        
-        }
+
     }
 
 

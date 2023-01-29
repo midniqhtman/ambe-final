@@ -13,6 +13,7 @@
 		0801410B296F81F600F2CDDD /* FullTextSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */; };
 		08081D0D2968C7ED00B91334 /* EmbedSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */; };
 		0814949D2979FA6200C0AEE7 /* QuizSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */; };
+		08153DDD2985D43F0019071E /* Armando.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 08153DDC2985D43F0019071E /* Armando.m4a */; };
 		0883A4662970CC4900CB6CC5 /* WordsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */; };
 		0885AF6E29621E860058957F /* AmbeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */; };
 		0885AF7029621E860058957F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6F29621E860058957F /* ContentView.swift */; };
@@ -30,6 +31,7 @@
 		0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTextSwiftUIView.swift; sourceTree = "<group>"; };
 		08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedSwiftUIView.swift; sourceTree = "<group>"; };
 		0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSwiftUI.swift; sourceTree = "<group>"; };
+		08153DDC2985D43F0019071E /* Armando.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armando.m4a; sourceTree = "<group>"; };
 		0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSwiftUIView.swift; sourceTree = "<group>"; };
 		0885AF6A29621E860058957F /* AmbeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbeSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -71,18 +73,12 @@
 		0885AF6C29621E860058957F /* AmbeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				08153DDC2985D43F0019071E /* Armando.m4a */,
 				0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */,
-				0885AF7B29621EA40058957F /* Modul.swift */,
-				08014108296F77FD00F2CDDD /* Words.swift */,
-				0885AF6F29621E860058957F /* ContentView.swift */,
-				08014104296F765800F2CDDD /* ExercisesSwiftUIView.swift */,
-				0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */,
-				08014102296F760000F2CDDD /* TextsSwiftUIView.swift */,
-				0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */,
-				0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */,
-				08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */,
-				0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */,
-				08E83FAB297C851400F74DF2 /* CardSwiftUI.swift */,
+				08B03AD1297DED5900669D17 /* Models */,
+				08B03AD3297DEDC300669D17 /* TabView1 */,
+				08B03AD4297DEDDD00669D17 /* TTabView2 */,
+				08B03AD2297DED7B00669D17 /* TabView3 */,
 				0885AF7129621E880058957F /* Assets.xcassets */,
 				0885AF7329621E880058957F /* Preview Content */,
 			);
@@ -95,6 +91,45 @@
 				0885AF7429621E880058957F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08B03AD1297DED5900669D17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0885AF7B29621EA40058957F /* Modul.swift */,
+				08014108296F77FD00F2CDDD /* Words.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		08B03AD2297DED7B00669D17 /* TabView3 */ = {
+			isa = PBXGroup;
+			children = (
+				08014104296F765800F2CDDD /* ExercisesSwiftUIView.swift */,
+				0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */,
+				0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */,
+				08E83FAB297C851400F74DF2 /* CardSwiftUI.swift */,
+			);
+			path = TabView3;
+			sourceTree = "<group>";
+		};
+		08B03AD3297DEDC300669D17 /* TabView1 */ = {
+			isa = PBXGroup;
+			children = (
+				0885AF6F29621E860058957F /* ContentView.swift */,
+				08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */,
+				0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */,
+			);
+			path = TabView1;
+			sourceTree = "<group>";
+		};
+		08B03AD4297DEDDD00669D17 /* TTabView2 */ = {
+			isa = PBXGroup;
+			children = (
+				08014102296F760000F2CDDD /* TextsSwiftUIView.swift */,
+				0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */,
+			);
+			path = TTabView2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +192,7 @@
 			files = (
 				0885AF7529621E880058957F /* Preview Assets.xcassets in Resources */,
 				0885AF7229621E880058957F /* Assets.xcassets in Resources */,
+				08153DDD2985D43F0019071E /* Armando.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
