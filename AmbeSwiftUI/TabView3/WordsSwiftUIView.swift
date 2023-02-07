@@ -14,6 +14,9 @@ struct WordsSwiftUIView: View {
     var body: some View {
             VStack {
                 Text("Words").font(.largeTitle).bold()
+                EmbedView(videoID: "CzPEAe8Q_Yg&t=188s")
+                    .frame(width: 360, height: 200, alignment: .leading)
+                    .cornerRadius(20)
                 List {
                     ForEach(words.sorted(by: < ), id: \.key) { key, value in
                         HStack {

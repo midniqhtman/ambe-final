@@ -30,10 +30,15 @@ struct Topic: Identifiable {
     static func getTopics() -> [Topic] {
         [
             Topic(id: 0, title: "Present Simple", topicDescription: .presentSimpleDescription, importantStuff: .presentSimpleImportant, youtubeurl: .presentSimpleUrl),
-            Topic(id: 1, title: "Future Simple", topicDescription: .futureSimple, importantStuff: .futureSimpleImportant, youtubeurl: .futureSimpleUrl),
-            Topic(id: 2, title: "Conjuctions and Prepositions", topicDescription: .conjuctionsDescription, importantStuff: .presAndConsImportant, youtubeurl: .consAndPrepsUrl),
-            Topic(id: 3, title: "Past Simple", topicDescription: .pastSimple, importantStuff: .pastSimpleImportant, youtubeurl: .pastSimpleUrl),
-            Topic(id: 4, title: "To Be", topicDescription: .toBe, importantStuff: .tobeImportant, youtubeurl: .toBeUrl)
+            Topic(id: 1, title: "Conjuctions and Prepositions", topicDescription: .conjuctionsDescription, importantStuff: .presAndConsImportant, youtubeurl: .consAndPrepsUrl),
+            Topic(id: 2, title: "To Be", topicDescription: .toBe, importantStuff: .tobeImportant, youtubeurl: .toBeUrl),
+            Topic(id: 3, title: "Future Simple", topicDescription: .futureSimple, importantStuff: .futureSimpleImportant, youtubeurl: .futureSimpleUrl),
+            Topic(id: 4, title: "Past Simple", topicDescription: .pastSimple, importantStuff: .pastSimpleImportant, youtubeurl: .pastSimpleUrl),
+            Topic(id: 5, title: "Adjectives", topicDescription: .adjectivs, importantStuff: .adjectives, youtubeurl: .adjectives),
+            Topic(id: 6, title: "Possessive Case", topicDescription: .possessiveCase, importantStuff: .possessiveCase, youtubeurl: .posessiveCase),
+            Topic(id: 7, title: "Objective Pronouns", topicDescription: .objectivePronouns, importantStuff:.objectivePronouns, youtubeurl: .objectivePronouns),
+            Topic(id: 8, title: "Modal Verbs", topicDescription: .ModalVerbs, importantStuff: .modalVerbs, youtubeurl: .modalVerbsUrl),
+            Topic(id: 9, title: "Articles", topicDescription: .articles, importantStuff: .articles, youtubeurl: .articles)
         ]
     }
     }
@@ -44,6 +49,11 @@ enum YoutubeURL: String {
     case pastSimpleUrl = "gMHxEO3LrQg"
     case consAndPrepsUrl = "3qbfcHiUrcI"
     case toBeUrl = "gZE0DdpwRew"
+    case modalVerbsUrl = "CzPEAe8Q_Yg&t=188s"
+    case adjectives = "gZE0DdpwRew2"
+    case posessiveCase = "gZE0DdpwRew3"
+    case objectivePronouns = "gZE0DdpwRew4"
+    case articles = "gZE0DdpwRew5"
 }
 
 enum ImportantStuff: String {
@@ -54,16 +64,100 @@ enum ImportantStuff: String {
     3) Отрицание - We don't like chocolate
     """
     case futureSimpleImportant = """
-    future
+    3 вида предложений:
+    1) Утверждение - We will go to America
+    2) Вопрос - Will we go to America? (во время вопроса ставим WILL в начало предложения)
+    3) Отрицание - We will not go to America (во время отрицаем добавляем NOT к WILL)
+    
+    WILL BE - буду
+    
+    Я буду - I will be
+    Мы будем - We will be
+    Он будет - He will be
+    
     """
     case pastSimpleImportant = """
-    past
+    Чтобы сказать что мы были, мы используем слова WAS и WERE
+    WAS - был
+    WERE - были
+    
+    I / He/ She / It - was
+    We / They / You - were
+    
+    3 вида предложений:
+    1) Утверждение - John was at school
+    2) Вопрос - Was John at school? (когда задаем вопрос TO BE ставим в начало предложения)
+    3) Отрицание - John was not at school (когда отрицаем добавляем NOT к TO BE)
+    
+    WAS и WERE это глагол TO BE в прошедшем времени
+    
+    Неправильные глаголы в прошедшем времени используются только в утверждении
+    
+    Например:
+    
+    We went to hospital - Мы пошли в больницу
+    Но если задаем вопрос или отрицание используем глагол в настоящем времени
+    Did you go to hospital yesterday? - Ты пошел в больницу вчера?
+    They didn't go to hospital yesterday - Они не пошли в больницу вчера
+    
+    Go - Went = Идти - Пошел
+    Know - Knew = Знать - Знал
+    See - Saw = Видеть - Видел
+    Have - Had = Иметь - Имел
+    
     """
     case tobeImportant = """
-    tobe
+    
+    To be имеет 3 формы - AM / IS / ARE
+    
+    3 вида предложений:
+    1) Утверждение - He is a doctor
+    2) Вопрос - Is he a doctor (когда задаем вопрос TO BE ставим в начало предложения)
+    3) Отрицание - He is not a doctor (когда отрицаем добавляем NOT к TO BE)
     """
     case presAndConsImportant = """
-    presAndCons
+    Некоторые предлоги мы также используем со временем
+    
+    On - с днями, например I don't work on Monday
+    In - с годами, временами года, месяцами, а также со словами morning / evening/ afternoon
+    At - с часами и со словом night
+    
+    """
+    case adjectives = """
+    John is smart - Джон умный
+    John is as smart as Jack - Джон такой же умный как и Джек (as - такой как)
+    John is smarter than Jack - Джон умнее, чем Джек
+    John is the smartest boy in the school - Джон самый умный мальчик в школе
+    
+    Big - большой
+    As big as - такой же большой как
+    Bigger than - больше чем
+    The biggest - самый большой
+    
+    """
+    case possessiveCase = """
+    Zubair's lesson = Зубайра урок (чей?)
+    Lesson of Zubair = Урок Зубайра
+    """
+    case objectivePronouns = """
+    Help me - помоги мне
+    Stay with us - останься с нами
+    Meet her - Встреть ее
+    """
+    case modalVerbs = """
+    3 вида предложений:
+    1) Утверждение - We must go
+    2) Вопрос - Can you help me? (когда задаем вопрос модальный глагол ставим в начало предложения)
+    3) Отрицание - You should not do it (когда отрицаем добавляем NOT к модальному глаголу)
+    """
+    case articles = """
+    Артикли используем только с существительными
+    
+    A / An - только с чем-то неопределенным, что не имеет важности
+    и только в единственном числе
+    
+    The - с чем-то особенным
+    
     """
 }
 
@@ -110,7 +204,27 @@ enum TopicsDescriptions: String {
     9. To - Направление, например: I go TO school.
     10. At - Местоположение, например: I am AT hospital.
     """
-    case toBe = "tobe"
+    case toBe = """
+    В английском языке есть два вида выражений:
+    
+    1) С действиями, когда кто-то что-то делает
+    2) Без действий, когда никто ничего не делает
+    
+    Когда у нас нет никаких действий мы ОБЯЗАТЕЛЬНО используем TO BE
+    AM / ARE / IS
+    
+    I - am
+    
+    You / We / They - are
+    
+    He / She / It / любое имя - is
+    
+    Например:
+    Я учитель - I am a teacher
+    Джон врач - John is a doctor
+    Они в Москве - They are in Moscow
+    
+    """
     case futureSimple = """
     Будущее время (Future Simple) указывает на то что мы сделаем в будущем.
     Образуется путем добавления дополнительного слова WILL
@@ -129,8 +243,90 @@ enum TopicsDescriptions: String {
         
     I won't delete this app - Я не удалю это приложение
     He won't fail me - Он не подведет меня
+    
+    Если в предложении нет действия, мы просто используем WILL BE - Буду
+    Например:
+    Я буду в Италии завтра - I will be in Italy tomorrow
     """
-    case pastSimple = "Past Simple is a tense"
+    case pastSimple = """
+    Прошедшее время (Past Simple) указывает на то что мы сделали в прошлом.
+    Образуется путем добавления дополнительного окончание ED к глаголу
+        
+    Например:
+        
+    Я жил в Германии - I lived in Germany
+    Мы учили английский - We learned English
+        
+    Чтобы задать вопрос слово Did ставим в начало предложения.
+        
+    Did you eat this cake? - Ты съел этот торт?
+    Did they come yesterday? = Они пришли вчера?
+        
+    Чтобы задать отрицание мы используем слово DIDN'T (DID NOT)
+        
+    I didn't see you in the park - Я не видел тебя в парке
+    He didn't know Jason - Он не знал Джейсона
+    
+    """
+    case ModalVerbs = """
+    Модальные глаголы - это глаголы которые не изменяются по временам
+    can, must, may, should, could
+    
+    Can - могу, умею
+    Must - должен
+    May - можно
+    Should - cледует
+    Could - мог, мог бы, умел
+    """
+    case adjectivs = """
+    Прилагательное - это часть речи отвечающая на вопросы
+    КАКОЙ? КАКАЯ? КАКИЕ? КАКОЕ?
+    
+    В разделе со словами вы можете найти основные прилагательные
+    Прилагательные обязательно используем с глаголом TO BE
+    
+    """
+    case objectivePronouns = """
+    Объектные местоимения - это местоимения, которые мы используем в 3-х случаях
+    
+    1) Во время просьбы или приказа
+    2) С предлогами (with, of, for, from и тд.)
+    3) Когда отвечаем на вопрос КОМУ?
+    
+    me - мне
+    you - тебе
+    him - ему
+    her - ей
+    it - этому
+    us - нам / нас
+    them - им / их
+    """
+    case possessiveCase = """
+    Когда мы отвечаем на вопросы ЧЕЙ? ЧЬЯ? ЧЬЕ? мы добавляем к слову 's
+    
+    Например:
+    Джона машина - John's car
+    
+    Также мы можем использовать предлог of, чтобы слово отвечало на вопрос ЧЕЙ?
+    
+    Например:
+    Машина Джона - Car of John
+    
+    Эти слова нужно просто запомнить, они называются притяжательные местоимения
+    
+    my - мое
+    your - твое
+    his - его
+    her - ее
+    our - наше
+    their - их
+    its - этого
+    """
+    case articles = """
+    Про артикли можно много говорить, но краткая информация на видео.
+    От себя могу сказать что если вы их не используете в речи, ничего страшного.
+    В основном они заметны на письме
+    """
     
 }
 

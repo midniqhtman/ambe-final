@@ -11,31 +11,50 @@ struct ContentView: View {
     
     let moduls = Topic.getTopics()
     
+    @State private var isShowAlert = false
+    @State private var inputText = ""
+    let promoCode = "Zubair"
+    
     var body: some View {
             TabView {
-                NavigationView {
+                VStack {
+                    NavigationView {
                         List(moduls) { modul in
                             VStack {
                                 NavigationLink(destination: TopicsSwiftUI(topic: modul) ) {
-                                    VStack {
-                                        ZStack {
-                                            Rectangle()
-                                                .frame(height: 100)
-                                                .cornerRadius(20)
-                                                .foregroundColor(.blue)
-                                                .shadow(color: .black, radius: 10)
-                                            Text("Урок" +  " \(modul.id + 1)." + " " + modul.title)
-                                                .foregroundColor(.white).bold().font(Font.title2)
-                                                .navigationBarTitle("Beginner's course")
+                                        VStack {
+                                            ZStack {
+                                                Rectangle()
+                                                    .frame(height: 80)
+                                                    .cornerRadius(20)
+                                                    .foregroundColor(.blue)
+                                                    .shadow(color: .black, radius: 5)
+                                                Text("Урок" +  " \(modul.id + 1)." + " " + modul.title)
+                                                    .foregroundColor(.white).bold().font(Font.title2)
+                                                    .navigationBarTitle("Beginner's course")
+                                                
+                                            }
                                         }
                                     }
                                 }
-                            }
                         }
-                    .listStyle(.plain)
+                        .listStyle(.plain)
+                        .navigationBarItems(trailing: Button(action: {
+                            print($inputText)
+                            self.isShowAlert = true}) {
+                            Text("Ввести код")
+                            }
+                        )
+                    }
+                    .alert( "Введите ваш промокод", isPresented: $isShowAlert) {
+                        TextField("Ваш промокод", text: $inputText)
+                    } message: {
+                        Text("")
+                    }
+
                 }
-                .navigationBarHidden(true)
                 
+                .navigationBarHidden(true)
                 .tabItem {
                     Label("Lessons", systemImage: "video")
                 }

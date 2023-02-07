@@ -21,7 +21,14 @@
 		0885AF7529621E880058957F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0885AF7429621E880058957F /* Preview Assets.xcassets */; };
 		0885AF7C29621EA40058957F /* Modul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF7B29621EA40058957F /* Modul.swift */; };
 		0885AF7E29624A120058957F /* TopicsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */; };
+		08C7B0AB2990868200F85309 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 08C7B0AA2990868200F85309 /* Realm */; };
+		08C7B0AD2990868200F85309 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 08C7B0AC2990868200F85309 /* RealmSwift */; };
 		08E83FAC297C851400F74DF2 /* CardSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E83FAB297C851400F74DF2 /* CardSwiftUI.swift */; };
+		08EA77742993110B00D2EA6F /* John and Jim.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 08EA77702993110B00D2EA6F /* John and Jim.m4a */; };
+		08EA77752993110B00D2EA6F /* The perfect day.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 08EA77712993110B00D2EA6F /* The perfect day.m4a */; };
+		08EA77762993110B00D2EA6F /* At the hospital.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 08EA77722993110B00D2EA6F /* At the hospital.m4a */; };
+		08EA77772993110B00D2EA6F /* My hobby.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 08EA77732993110B00D2EA6F /* My hobby.m4a */; };
+		08EA77792993122500D2EA6F /* Bird Island.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 08EA77782993122500D2EA6F /* Bird Island.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +48,11 @@
 		0885AF7B29621EA40058957F /* Modul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modul.swift; sourceTree = "<group>"; };
 		0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsSwiftUIView.swift; sourceTree = "<group>"; };
 		08E83FAB297C851400F74DF2 /* CardSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSwiftUI.swift; sourceTree = "<group>"; };
+		08EA77702993110B00D2EA6F /* John and Jim.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "John and Jim.m4a"; sourceTree = "<group>"; };
+		08EA77712993110B00D2EA6F /* The perfect day.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The perfect day.m4a"; sourceTree = "<group>"; };
+		08EA77722993110B00D2EA6F /* At the hospital.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "At the hospital.m4a"; sourceTree = "<group>"; };
+		08EA77732993110B00D2EA6F /* My hobby.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "My hobby.m4a"; sourceTree = "<group>"; };
+		08EA77782993122500D2EA6F /* Bird Island.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bird Island.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C7B0AD2990868200F85309 /* RealmSwift in Frameworks */,
+				08C7B0AB2990868200F85309 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +87,7 @@
 		0885AF6C29621E860058957F /* AmbeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				08153DDC2985D43F0019071E /* Armando.m4a */,
+				08A69C1A29888088000D5A6E /* audiofiles */,
 				0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */,
 				08B03AD1297DED5900669D17 /* Models */,
 				08B03AD3297DEDC300669D17 /* TabView1 */,
@@ -91,6 +105,19 @@
 				0885AF7429621E880058957F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		08A69C1A29888088000D5A6E /* audiofiles */ = {
+			isa = PBXGroup;
+			children = (
+				08EA77722993110B00D2EA6F /* At the hospital.m4a */,
+				08EA77782993122500D2EA6F /* Bird Island.m4a */,
+				08EA77702993110B00D2EA6F /* John and Jim.m4a */,
+				08EA77732993110B00D2EA6F /* My hobby.m4a */,
+				08EA77712993110B00D2EA6F /* The perfect day.m4a */,
+				08153DDC2985D43F0019071E /* Armando.m4a */,
+			);
+			path = audiofiles;
 			sourceTree = "<group>";
 		};
 		08B03AD1297DED5900669D17 /* Models */ = {
@@ -148,6 +175,10 @@
 			dependencies = (
 			);
 			name = AmbeSwiftUI;
+			packageProductDependencies = (
+				08C7B0AA2990868200F85309 /* Realm */,
+				08C7B0AC2990868200F85309 /* RealmSwift */,
+			);
 			productName = AmbeSwiftUI;
 			productReference = 0885AF6A29621E860058957F /* AmbeSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -176,6 +207,9 @@
 				Base,
 			);
 			mainGroup = 0885AF6129621E860058957F;
+			packageReferences = (
+				08C7B0A92990868200F85309 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 0885AF6B29621E860058957F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,7 +226,12 @@
 			files = (
 				0885AF7529621E880058957F /* Preview Assets.xcassets in Resources */,
 				0885AF7229621E880058957F /* Assets.xcassets in Resources */,
+				08EA77742993110B00D2EA6F /* John and Jim.m4a in Resources */,
+				08EA77792993122500D2EA6F /* Bird Island.m4a in Resources */,
+				08EA77752993110B00D2EA6F /* The perfect day.m4a in Resources */,
 				08153DDD2985D43F0019071E /* Armando.m4a in Resources */,
+				08EA77762993110B00D2EA6F /* At the hospital.m4a in Resources */,
+				08EA77772993110B00D2EA6F /* My hobby.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +454,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08C7B0A92990868200F85309 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08C7B0AA2990868200F85309 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08C7B0A92990868200F85309 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		08C7B0AC2990868200F85309 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08C7B0A92990868200F85309 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0885AF6229621E860058957F /* Project object */;
 }

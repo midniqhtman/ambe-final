@@ -15,37 +15,58 @@ struct FullTextSwiftUIView: View {
     
     @State var progress = 0.0
     @State var isPlaying = false
+    @State var textIsShown = false
     
     var body: some View {
-        VStack {
-            Text(text.title).font(.largeTitle).bold().foregroundColor(.black)
-            
-            Text(text.mainText.rawValue).bold()
-                .padding()
-            //                .frame()
-                .background(.cyan)
-                .foregroundColor(.white)
-                .cornerRadius(20)
-                .padding()
-            Button(action: self.startRecord,
-                   label: {
-                if isPlaying == false {
-                    Label("Play", systemImage: "play")
-                } else {
-                    Label("Pause", systemImage: "pause")
+        ScrollView {
+            VStack {
+                Text(text.title).font(.largeTitle).bold().foregroundColor(.black)
+                
+                Text(text.mainText.rawValue).bold()
+                    .padding()
+                    .background(.cyan)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+                    .padding()
+                
+                Button(action: { self.textIsShown.toggle()}) {
+                    if textIsShown {
+                            Text("Скрыть перевод")
+                    } else {
+                        Text("Показать перевод")
+                            
+                    }
                 }
+                if textIsShown {
+                        Text(text.translation.rawValue)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .padding()
+                }
+                
+                Button(action: { self.startRecord(audioUrl: text.audioRecord.rawValue) },
+                       label: {
+                    if isPlaying == false {
+                        Label("Play", systemImage: "play")
+                    } else {
+                        Label("Pause", systemImage: "pause")
+                    }
+                }
+                )
+                
+                
+                .buttonStyle(GrowingButton())
+                Slider(value: $progress, in: 0...100, onEditingChanged: {_ in
+                    player.currentTime = Double(self.progress) / 100.0 * player.duration
+                }).padding([.leading, .trailing])
             }
-            )
             
-            .buttonStyle(GrowingButton())
-            Slider(value: $progress, in: 0...100, onEditingChanged: {_ in
-                player.currentTime = Double(self.progress) / 100.0 * player.duration
-            }).padding([.leading, .trailing])
         }
-        
     }
-    func startRecord() {
-        let url = Bundle.main.url(forResource: "Armando", withExtension: "m4a")
+    func startRecord(audioUrl: String) {
+        let url = Bundle.main.url(forResource: audioUrl, withExtension: "m4a")
         
         guard url != nil else {
             print("error 405")
@@ -65,12 +86,19 @@ struct FullTextSwiftUIView: View {
                 print("error 404")
             }
         }
-        if player.isPlaying {
+            if isPlaying {
                 player.pause()
             } else {
                 player.play()
             }
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+                  self.progress = player.currentTime / player.duration * 100.0
+                  if !self.isPlaying {
+                      timer.invalidate()
+                  }
+              }
         isPlaying.toggle()
+
         }
     }
 

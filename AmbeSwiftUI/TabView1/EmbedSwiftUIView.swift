@@ -28,11 +28,10 @@ struct EmbedView: UIViewRepresentable {
         return WKWebView()
     }
     
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        guard let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(videoID)") else { return }
-        uiView.scrollView.isScrollEnabled = false
-        uiView.load(URLRequest(url: youtubeURL))
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+            guard let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(self.videoID)") else { return }
+                uiView.scrollView.isScrollEnabled = false
+                uiView.load(URLRequest(url: youtubeURL))
     }
 }
-
 

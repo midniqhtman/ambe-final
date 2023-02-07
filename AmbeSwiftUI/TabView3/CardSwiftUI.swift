@@ -38,11 +38,9 @@ struct CardSwiftUI: View {
                 .shadow(color: .gray, radius: 4)
             Text(stuff.cardWord)
                 .bold()
-                .font(.largeTitle)
+                .font(.title2)
                 .foregroundColor(.white)
                 .bold()
-                .font(.largeTitle)
-                .foregroundColor(.white)
                 .shadow(color: .white, radius: 4)
         }                .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
         
@@ -59,9 +57,7 @@ struct CardSwiftUI: View {
 
                 }.onEnded { _ in
                     withAnimation {
-                        self.rightCards += 1
                         swipeCard(width: offset.width)
-                        print(rightCards)
                     }
                 }
                 
@@ -76,6 +72,7 @@ struct CardSwiftUI: View {
         case 150...500:
             offset = CGSize(width: 500, height: 0)
             self.indexOf += 1
+            self.rightCards += 1
         default:
             offset = .zero
         }
@@ -103,8 +100,8 @@ struct CardSwiftUI: View {
 }
 
 
-//struct CardSwiftUI_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CardSwiftUI(words: ["hello":"privet"], stuff: self.stuff, indexOf: self.stuff.indexOf, rightCards: self.stuff.rightCards, wrongCards: self.stuff.wrongCards)
-//    }
-//}
+struct CardSwiftUI_Previews: PreviewProvider {
+    static var previews: some View {
+        CardSwiftUI(words: ["hello":"hello"], stuff: Stuff(), indexOf: .constant(0) , rightCards: .constant(0) , wrongCards: .constant(0) )
+    }
+}

@@ -29,7 +29,6 @@ class Stuff: ObservableObject  {
             setupCard()
         } else {
             indexOf = 0
-            cardWord = "\(rightCards) правильных ответов из \(words.count)"
         }
     }
     
@@ -72,11 +71,12 @@ struct QuizSwiftUI: View {
             }
             ZStack {
                 Text("\(stuff.rightCards) правильных ответов из \(words.count)")
+                
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
                     CardSwiftUI(words: words,
                                 stuff: stuff,
                                 indexOf: $stuff.indexOf,
-                                rightCards: $stuff.indexOf,
+                                rightCards: $stuff.rightCards,
                                 wrongCards: $stuff.wrongCards)
                         .onTapGesture {
                             print(stuff.indexOf)
