@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
     
@@ -15,7 +16,7 @@ struct ContentView: View {
     @State private var inputText = ""
     @State private var isActive = [Bool](repeating: false, count: Topic.getTopics().count)
     let promoCode = "Zubair"
-    
+ 
     var body: some View {
             TabView {
                 VStack {
@@ -40,6 +41,7 @@ struct ContentView: View {
                                 }.buttonStyle(PlainButtonStyle())
                                 .disabled(modul.id >= 3 && inputText != promoCode)
                                 .onTapGesture {
+                                    
                                     if modul.id < 3 {
                                         self.isActive[modul.id] = true
                                       } else if inputText == self.promoCode {
@@ -52,10 +54,18 @@ struct ContentView: View {
                         .listStyle(.plain)
                         .navigationBarItems(trailing: Button(action: {
                             print($inputText)
-                            self.isShowAlert = true}) {
+                            self.isShowAlert = true
+                            let realm = try! Realm()
+                            try! realm.write {
+                                let inputText = TextObject()
+                                inputText.promoCode = self.inputText
+                                realm.add(inputText)
+                            }
+                        }) {
                             Text("Ввести код")
                             }
-                        )
+                        ).bold()
+                        
                         .navigationBarItems(leading: Button(action: {
                           guard let url = URL(string: "https://www.instagram.com/") else { return }
                           UIApplication.shared.open(url)
@@ -64,6 +74,7 @@ struct ContentView: View {
                         })
                     }
                     .alert( "Введите ваш промокод чтобы открыть все уроки, чтобы получить код нажмите на кнопку ПОЛУЧИТЬ КОД", isPresented: $isShowAlert) {
+                        
                         TextField("Ваш промокод", text: $inputText)
                     } message: {
                         Text("")
@@ -72,15 +83,15 @@ struct ContentView: View {
                 
                 .navigationBarHidden(true)
                 .tabItem {
-                    Label("Lessons", systemImage: "video")
+                    Label("Видео", systemImage: "video")
                 }
                     TextsSwiftUIView()
                             .tabItem {
-                            Label("Texts", systemImage: "book")
+                            Label("Тексты", systemImage: "book")
                                     }
                                 ExercisesSwiftUIView()
                                     .tabItem {
-                                        Label("Exercise", systemImage: "pencil")
+                                        Label("Слова", systemImage: "pencil")
                                 }
                             }
                         }

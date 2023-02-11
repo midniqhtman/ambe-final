@@ -22,9 +22,6 @@ struct WordsSwiftUIView: View {
     var body: some View {
             VStack {
                 Text(title).font(.largeTitle).bold()
-//                EmbedView(videoID: "CzPEAe8Q_Yg&t=188s")
-//                    .frame(width: 360, height: 200, alignment: .leading)
-                    .cornerRadius(20)
                 Button(action: { self.startRecord(audioUrl: title) },
                        label: {
                     if isPlaying == false {
