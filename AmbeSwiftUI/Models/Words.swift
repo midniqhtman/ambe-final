@@ -245,12 +245,12 @@ struct Texts: Identifiable {
     static func getTexts() -> [Texts] {
         [Texts(title: "Armando",mainText: .armando, id: 0, audioRecord: .armandoAudio, translation: .armandoRus),
          Texts(title: "My hobby",mainText: .hobbie, id: 1, audioRecord: .myHobby, translation: .myHobbyRus),
-         Texts(title: "Trip to Germany", mainText: .tripToGermany, id: 2, audioRecord: .armandoAudio, translation: .tripToGermanyRus),
+         Texts(title: "Trip to Germany", mainText: .tripToGermany, id: 2, audioRecord: .tripToGermany, translation: .tripToGermanyRus),
          Texts(title: "John and Jim", mainText: .johnAndJim, id: 3, audioRecord: .johnAndJim, translation: .johnAndJimRus),
          Texts(title: "At the Hospital", mainText: .hospital, id: 4, audioRecord: .atTheHospital, translation: .hospitalRus),
          Texts(title: "Bird Island", mainText: .birdIsland, id: 5, audioRecord: .birdIsland, translation: .birdIslandRus),
          Texts(title: "The perfect day", mainText: .perfectDay, id: 6, audioRecord: .thePerfectDay, translation: .perfectDayRus),
-         Texts(title: "At the restaraunt", mainText: .atTheRestaraunt, id: 7, audioRecord: .armandoAudio, translation: .atTheRestarauntRus),
+         Texts(title: "At the restaraunt", mainText: .atTheRestaraunt, id: 7, audioRecord: .atTheRestaraunt, translation: .atTheRestarauntRus),
          Texts(title: "Migel", mainText: .migel, id: 8, audioRecord: .armandoAudio, translation: .migelRus)
         
         ]
@@ -317,6 +317,8 @@ struct Texts: Identifiable {
         case thePerfectDay = "The perfect day"
         case johnAndJim = "John and Jim"
         case birdIsland = "Bird Island"
+        case atTheRestaraunt = "At the restaraunt"
+        case tripToGermany = "Trip to Germany"
     }
     
     enum wordsAudios: String {

@@ -13,6 +13,7 @@ struct ContentView: View {
     
     @State private var isShowAlert = false
     @State private var inputText = ""
+    @State private var isActive = [Bool](repeating: false, count: Topic.getTopics().count)
     let promoCode = "Zubair"
     
     var body: some View {
@@ -21,7 +22,7 @@ struct ContentView: View {
                     NavigationView {
                         List(moduls) { modul in
                                 VStack {
-                                    NavigationLink(destination: TopicsSwiftUI(topic: modul)) {
+                                    NavigationLink(destination: TopicsSwiftUI(topic: modul), isActive: self.$isActive[modul.id]) {
                                         VStack {
                                             ZStack {
                                                 Rectangle()
@@ -36,6 +37,16 @@ struct ContentView: View {
                                             }
                                         }
                                     }
+                                }.buttonStyle(PlainButtonStyle())
+                                .disabled(modul.id >= 3 && inputText != promoCode)
+                                .onTapGesture {
+                                    if modul.id < 3 {
+                                        self.isActive[modul.id] = true
+                                      } else if inputText == self.promoCode {
+                                          self.isActive[modul.id] = true
+                                      } else {
+                                          self.isShowAlert = true
+                                      }
                                 }
                             }
                         .listStyle(.plain)
@@ -45,13 +56,18 @@ struct ContentView: View {
                             Text("Ввести код")
                             }
                         )
+                        .navigationBarItems(leading: Button(action: {
+                          guard let url = URL(string: "https://www.instagram.com/") else { return }
+                          UIApplication.shared.open(url)
+                        }) {
+                            Text("Получить код").bold()
+                        })
                     }
-                    .alert( "Введите ваш промокод", isPresented: $isShowAlert) {
+                    .alert( "Введите ваш промокод чтобы открыть все уроки, чтобы получить код нажмите на кнопку ПОЛУЧИТЬ КОД", isPresented: $isShowAlert) {
                         TextField("Ваш промокод", text: $inputText)
                     } message: {
                         Text("")
                     }
-
                 }
                 
                 .navigationBarHidden(true)

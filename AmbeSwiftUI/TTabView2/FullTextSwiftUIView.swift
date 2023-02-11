@@ -64,7 +64,8 @@ struct FullTextSwiftUIView: View {
             
         }
         .onDisappear {
-            player.stop()
+            if player != nil {
+                player.stop() }
         }
     }
     func startRecord(audioUrl: String) {

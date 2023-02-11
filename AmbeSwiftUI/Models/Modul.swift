@@ -34,11 +34,11 @@ struct Topic: Identifiable {
             Topic(id: 2, title: "To Be", topicDescription: .toBe, importantStuff: .tobeImportant, youtubeurl: .toBeUrl),
             Topic(id: 3, title: "Future Simple", topicDescription: .futureSimple, importantStuff: .futureSimpleImportant, youtubeurl: .futureSimpleUrl),
             Topic(id: 4, title: "Past Simple", topicDescription: .pastSimple, importantStuff: .pastSimpleImportant, youtubeurl: .pastSimpleUrl),
-            Topic(id: 5, title: "Adjectives", topicDescription: .adjectivs, importantStuff: .adjectives, youtubeurl: .adjectives),
-            Topic(id: 6, title: "Possessive Case", topicDescription: .possessiveCase, importantStuff: .possessiveCase, youtubeurl: .posessiveCase),
-            Topic(id: 7, title: "Objective Pronouns", topicDescription: .objectivePronouns, importantStuff:.objectivePronouns, youtubeurl: .objectivePronouns),
+            Topic(id: 5, title: "Adjectives", topicDescription: .adjectivs, importantStuff: .adjectives, youtubeurl: .adjectivesUrl),
+            Topic(id: 6, title: "Possessive Case", topicDescription: .possessiveCase, importantStuff: .possessiveCase, youtubeurl: .posessiveCaseUrl),
+            Topic(id: 7, title: "Objective Pronouns", topicDescription: .objectivePronouns, importantStuff:.objectivePronouns, youtubeurl: .objectivePronounsUrl),
             Topic(id: 8, title: "Modal Verbs", topicDescription: .ModalVerbs, importantStuff: .modalVerbs, youtubeurl: .modalVerbsUrl),
-            Topic(id: 9, title: "Articles", topicDescription: .articles, importantStuff: .articles, youtubeurl: .articles)
+            Topic(id: 9, title: "Articles", topicDescription: .articles, importantStuff: .articles, youtubeurl: .articlesUrl)
         ]
     }
     }
@@ -50,10 +50,10 @@ enum YoutubeURL: String {
     case consAndPrepsUrl = "3qbfcHiUrcI"
     case toBeUrl = "gZE0DdpwRew"
     case modalVerbsUrl = "CzPEAe8Q_Yg&t=188s"
-    case adjectives = "gZE0DdpwRew2"
-    case posessiveCase = "gZE0DdpwRew3"
-    case objectivePronouns = "gZE0DdpwRew4"
-    case articles = "gZE0DdpwRew5"
+    case adjectivesUrl = "gZE0DdpwRew2"
+    case posessiveCaseUrl = "gZE0DdpwRew3"
+    case objectivePronounsUrl = "jjWABQqpTcg&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=3"
+    case articlesUrl = "gZE0DdpwRew5"
 }
 
 enum ImportantStuff: String {

@@ -15,6 +15,7 @@ struct TopicsSwiftUI: View {
             ScrollView {
                 VStack {
                     EmbedFrameView(topic: topic)
+                    EmbedView(videoID: topic.youtubeurl.rawValue)
                     HStack {
                         Spacer()
                         Text(topic.topicDescription.rawValue)

@@ -54,7 +54,8 @@ struct WordsSwiftUIView: View {
                     }.buttonStyle(GrowingButton())
                 }
             }.onDisappear {
-                player.stop()
+                if player != nil {
+                    player.stop() }
             }
         }
     
