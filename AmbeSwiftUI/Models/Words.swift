@@ -128,7 +128,7 @@ struct Themes {
                 "Check-out": "Выехать",
                 "Room": "Комната",
                 "Key": "Ключ",
-                "Elevato / Lift": "Лифт",
+                "Elevator / Lift": "Лифт",
                 "Breakfast": "Завтрак",
                 "Free": "Бесплатный",
                 "Reservation": "Бронь",
@@ -317,6 +317,19 @@ struct Texts: Identifiable {
         case thePerfectDay = "The perfect day"
         case johnAndJim = "John and Jim"
         case birdIsland = "Bird Island"
+    }
+    
+    enum wordsAudios: String {
+        case family = "family"
+        case hotel = "hotel"
+        case daysOfTheWeek = "days of the week"
+        case months = "months"
+        case firstVerbs = "first verbs"
+        case secondVerbs = "second verbs"
+        case adjectives = "adjectives"
+        case airport = "airport"
+        case products = "products"
+        case clothes = "clothes"
     }
     
     enum Translation: String {

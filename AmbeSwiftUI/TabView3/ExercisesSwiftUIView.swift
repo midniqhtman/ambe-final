@@ -12,7 +12,7 @@ struct ExercisesSwiftUIView: View {
     var body: some View {
         NavigationView {
             List(topics) { topic in
-                NavigationLink(destination: WordsSwiftUIView(words: topic.theme)) {
+                NavigationLink(destination: WordsSwiftUIView(words: topic.theme, title: topic.title)) {
                     Text(topic.title)
                     
                 }

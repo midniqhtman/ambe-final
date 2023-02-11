@@ -20,8 +20,8 @@ struct ContentView: View {
                 VStack {
                     NavigationView {
                         List(moduls) { modul in
-                            VStack {
-                                NavigationLink(destination: TopicsSwiftUI(topic: modul) ) {
+                                VStack {
+                                    NavigationLink(destination: TopicsSwiftUI(topic: modul)) {
                                         VStack {
                                             ZStack {
                                                 Rectangle()
@@ -37,7 +37,7 @@ struct ContentView: View {
                                         }
                                     }
                                 }
-                        }
+                            }
                         .listStyle(.plain)
                         .navigationBarItems(trailing: Button(action: {
                             print($inputText)
@@ -69,6 +69,7 @@ struct ContentView: View {
                             }
                         }
                     }
+
 
 
     

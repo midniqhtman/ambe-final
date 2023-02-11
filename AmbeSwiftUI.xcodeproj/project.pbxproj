@@ -14,6 +14,20 @@
 		08081D0D2968C7ED00B91334 /* EmbedSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */; };
 		0814949D2979FA6200C0AEE7 /* QuizSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */; };
 		08153DDD2985D43F0019071E /* Armando.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 08153DDC2985D43F0019071E /* Armando.m4a */; };
+		081B91FA2997180500F38654 /* Trip to Germany.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B91F92997180500F38654 /* Trip to Germany.m4a */; };
+		081B91FC2997180A00F38654 /* At the restaraunt.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B91FB2997180A00F38654 /* At the restaraunt.m4a */; };
+		081B91FE2997181500F38654 /* Migel.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B91FD2997181500F38654 /* Migel.m4a */; };
+		081B920A29971CF900F38654 /* Отель.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B91FF29971CF800F38654 /* Отель.m4a */; };
+		081B920B29971CF900F38654 /* Одежда.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920029971CF800F38654 /* Одежда.m4a */; };
+		081B920C29971CF900F38654 /* Дни недели.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920129971CF800F38654 /* Дни недели.m4a */; };
+		081B920D29971CF900F38654 /* Месяцы.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920229971CF800F38654 /* Месяцы.m4a */; };
+		081B920E29971CF900F38654 /* Продукты.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920329971CF800F38654 /* Продукты.m4a */; };
+		081B920F29971CF900F38654 /* Семья.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920429971CF900F38654 /* Семья.m4a */; };
+		081B921029971CF900F38654 /* Глаголы 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920529971CF900F38654 /* Глаголы 2.m4a */; };
+		081B921129971CF900F38654 /* Дом.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920629971CF900F38654 /* Дом.m4a */; };
+		081B921229971CF900F38654 /* Аэропорт.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920729971CF900F38654 /* Аэропорт.m4a */; };
+		081B921329971CF900F38654 /* Первые глаголы.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920829971CF900F38654 /* Первые глаголы.m4a */; };
+		081B921429971CF900F38654 /* Прилагательные.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920929971CF900F38654 /* Прилагательные.m4a */; };
 		0883A4662970CC4900CB6CC5 /* WordsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */; };
 		0885AF6E29621E860058957F /* AmbeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */; };
 		0885AF7029621E860058957F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6F29621E860058957F /* ContentView.swift */; };
@@ -39,6 +53,20 @@
 		08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedSwiftUIView.swift; sourceTree = "<group>"; };
 		0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSwiftUI.swift; sourceTree = "<group>"; };
 		08153DDC2985D43F0019071E /* Armando.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armando.m4a; sourceTree = "<group>"; };
+		081B91F92997180500F38654 /* Trip to Germany.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trip to Germany.m4a"; sourceTree = "<group>"; };
+		081B91FB2997180A00F38654 /* At the restaraunt.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "At the restaraunt.m4a"; sourceTree = "<group>"; };
+		081B91FD2997181500F38654 /* Migel.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Migel.m4a; sourceTree = "<group>"; };
+		081B91FF29971CF800F38654 /* Отель.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Отель.m4a"; sourceTree = "<group>"; };
+		081B920029971CF800F38654 /* Одежда.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Одежда.m4a"; sourceTree = "<group>"; };
+		081B920129971CF800F38654 /* Дни недели.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Дни недели.m4a"; sourceTree = "<group>"; };
+		081B920229971CF800F38654 /* Месяцы.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Месяцы.m4a"; sourceTree = "<group>"; };
+		081B920329971CF800F38654 /* Продукты.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Продукты.m4a"; sourceTree = "<group>"; };
+		081B920429971CF900F38654 /* Семья.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Семья.m4a"; sourceTree = "<group>"; };
+		081B920529971CF900F38654 /* Глаголы 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Глаголы 2.m4a"; sourceTree = "<group>"; };
+		081B920629971CF900F38654 /* Дом.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Дом.m4a"; sourceTree = "<group>"; };
+		081B920729971CF900F38654 /* Аэропорт.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Аэропорт.m4a"; sourceTree = "<group>"; };
+		081B920829971CF900F38654 /* Первые глаголы.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Первые глаголы.m4a"; sourceTree = "<group>"; };
+		081B920929971CF900F38654 /* Прилагательные.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Прилагательные.m4a"; sourceTree = "<group>"; };
 		0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSwiftUIView.swift; sourceTree = "<group>"; };
 		0885AF6A29621E860058957F /* AmbeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbeSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -113,6 +141,20 @@
 				08EA77722993110B00D2EA6F /* At the hospital.m4a */,
 				08EA77782993122500D2EA6F /* Bird Island.m4a */,
 				08EA77702993110B00D2EA6F /* John and Jim.m4a */,
+				081B91F92997180500F38654 /* Trip to Germany.m4a */,
+				081B91FD2997181500F38654 /* Migel.m4a */,
+				081B91FB2997180A00F38654 /* At the restaraunt.m4a */,
+				081B920729971CF900F38654 /* Аэропорт.m4a */,
+				081B920529971CF900F38654 /* Глаголы 2.m4a */,
+				081B920129971CF800F38654 /* Дни недели.m4a */,
+				081B920629971CF900F38654 /* Дом.m4a */,
+				081B920229971CF800F38654 /* Месяцы.m4a */,
+				081B920029971CF800F38654 /* Одежда.m4a */,
+				081B91FF29971CF800F38654 /* Отель.m4a */,
+				081B920829971CF900F38654 /* Первые глаголы.m4a */,
+				081B920929971CF900F38654 /* Прилагательные.m4a */,
+				081B920329971CF800F38654 /* Продукты.m4a */,
+				081B920429971CF900F38654 /* Семья.m4a */,
 				08EA77732993110B00D2EA6F /* My hobby.m4a */,
 				08EA77712993110B00D2EA6F /* The perfect day.m4a */,
 				08153DDC2985D43F0019071E /* Armando.m4a */,
@@ -225,13 +267,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				0885AF7529621E880058957F /* Preview Assets.xcassets in Resources */,
+				081B920C29971CF900F38654 /* Дни недели.m4a in Resources */,
+				081B921029971CF900F38654 /* Глаголы 2.m4a in Resources */,
+				081B920A29971CF900F38654 /* Отель.m4a in Resources */,
+				081B920D29971CF900F38654 /* Месяцы.m4a in Resources */,
+				081B920F29971CF900F38654 /* Семья.m4a in Resources */,
+				081B91FA2997180500F38654 /* Trip to Germany.m4a in Resources */,
+				081B921329971CF900F38654 /* Первые глаголы.m4a in Resources */,
 				0885AF7229621E880058957F /* Assets.xcassets in Resources */,
 				08EA77742993110B00D2EA6F /* John and Jim.m4a in Resources */,
+				081B920E29971CF900F38654 /* Продукты.m4a in Resources */,
+				081B91FC2997180A00F38654 /* At the restaraunt.m4a in Resources */,
+				081B920B29971CF900F38654 /* Одежда.m4a in Resources */,
 				08EA77792993122500D2EA6F /* Bird Island.m4a in Resources */,
 				08EA77752993110B00D2EA6F /* The perfect day.m4a in Resources */,
+				081B921229971CF900F38654 /* Аэропорт.m4a in Resources */,
 				08153DDD2985D43F0019071E /* Armando.m4a in Resources */,
 				08EA77762993110B00D2EA6F /* At the hospital.m4a in Resources */,
+				081B921429971CF900F38654 /* Прилагательные.m4a in Resources */,
 				08EA77772993110B00D2EA6F /* My hobby.m4a in Resources */,
+				081B91FE2997181500F38654 /* Migel.m4a in Resources */,
+				081B921129971CF900F38654 /* Дом.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

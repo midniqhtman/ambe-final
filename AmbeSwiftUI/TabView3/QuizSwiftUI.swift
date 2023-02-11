@@ -57,11 +57,11 @@ struct QuizSwiftUI: View {
     @State var contentRotation = 0.0
     @State var cardWord: String
     
+    var title: String
+    
     var body: some View {
         VStack {
-            Button("next") {
-                stuff.setWordsIndexes(words: words)
-            }
+            Text(title).font(.title).bold()
             HStack {
                 Image(systemName: "arrowshape.left.fill")
                     .resizable()
@@ -70,7 +70,7 @@ struct QuizSwiftUI: View {
                 Text("Если не знаешь смахни влево").font(.title2)
             }
             ZStack {
-                Text("\(stuff.rightCards) правильных ответов из \(words.count)")
+                Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.blue).bold().font(.title2)
                 
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
                     CardSwiftUI(words: words,
@@ -122,7 +122,7 @@ struct QuizSwiftUI: View {
   
     struct QuizSwiftUI_Previews: PreviewProvider {
         static var previews: some View {
-            QuizSwiftUI(words:["Zubair" : "Зубайр"], cardWord: "")
+            QuizSwiftUI(words:["Zubair" : "Зубайр"], cardWord: "", title: "")
         }
     }
     

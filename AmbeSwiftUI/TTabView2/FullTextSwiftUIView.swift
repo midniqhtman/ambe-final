@@ -8,11 +8,11 @@
 import SwiftUI
 import AVFoundation
 
-var player: AVAudioPlayer!
 
 struct FullTextSwiftUIView: View {
     var text: Texts
     
+    @State var player: AVAudioPlayer!
     @State var progress = 0.0
     @State var isPlaying = false
     @State var textIsShown = false
@@ -31,10 +31,9 @@ struct FullTextSwiftUIView: View {
                 
                 Button(action: { self.textIsShown.toggle()}) {
                     if textIsShown {
-                            Text("Скрыть перевод")
+                        Text("Скрыть перевод")
                     } else {
                         Text("Показать перевод")
-                            
                     }
                 }
                 if textIsShown {
@@ -44,7 +43,7 @@ struct FullTextSwiftUIView: View {
                             .background(Color.blue)
                             .cornerRadius(10)
                             .padding()
-                }
+              }
                 
                 Button(action: { self.startRecord(audioUrl: text.audioRecord.rawValue) },
                        label: {
@@ -63,6 +62,9 @@ struct FullTextSwiftUIView: View {
                 }).padding([.leading, .trailing])
             }
             
+        }
+        .onDisappear {
+            player.stop()
         }
     }
     func startRecord(audioUrl: String) {
