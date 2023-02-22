@@ -29,7 +29,8 @@ struct FullTextSwiftUIView: View {
                     .cornerRadius(20)
                     .padding()
                 
-                Button(action: { self.textIsShown.toggle()}) {
+                Button(action: {
+                    withAnimation { self.textIsShown.toggle()}}) {
                     if textIsShown {
                         Text("Скрыть перевод")
                     } else {
@@ -37,13 +38,17 @@ struct FullTextSwiftUIView: View {
                     }
                 }
                 if textIsShown {
+                    withAnimation {
                         Text(text.translation.rawValue)
                             .foregroundColor(.white)
                             .padding()
                             .background(Color.blue)
                             .cornerRadius(10)
                             .padding()
-              }
+                            .bold()
+                            .opacity(textIsShown ? 1 : 0)
+                    }.animation(.easeIn(duration: 1))
+                }
                 
                 Button(action: { self.startRecord(audioUrl: text.audioRecord.rawValue) },
                        label: {

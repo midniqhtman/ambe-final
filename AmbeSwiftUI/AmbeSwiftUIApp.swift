@@ -9,12 +9,7 @@ import SwiftUI
 
 @main
 struct AmbeSwiftUIApp: App {
-    
-//    init() {
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.white]
-//        UINavigationBar.appearance().backgroundColor = .systemBlue
-//    }
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()

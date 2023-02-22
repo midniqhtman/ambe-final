@@ -44,10 +44,10 @@ struct Topic: Identifiable {
     }
 
 enum YoutubeURL: String {
-    case presentSimpleUrl = "iy2oY7hJbcs"
+    case presentSimpleUrl = "wIJeRkZWACk&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=4"
     case futureSimpleUrl = "Wz_Dc7Q3CNw"
     case pastSimpleUrl = "gMHxEO3LrQg"
-    case consAndPrepsUrl = "3qbfcHiUrcI"
+    case consAndPrepsUrl = "SY3K7jzfJoE&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=5"
     case toBeUrl = "gZE0DdpwRew"
     case modalVerbsUrl = "CzPEAe8Q_Yg&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=1"
     case adjectivesUrl = "Eu3t2zRh5mI&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=3"

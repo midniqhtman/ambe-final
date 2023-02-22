@@ -17,6 +17,7 @@ struct ContentView: View {
     
     @State private var isShowAlert = false
     @State private var isShowModal = false
+    @State private var isShowingLaunchScreen = true
     @State private var inputText = ""
     @State private var check = ""
     @State private var isActive = [Bool](repeating: false, count: Topic.getTopics().count)
@@ -39,15 +40,20 @@ struct ContentView: View {
                                             tableViewCell()
                                             Text("Урок" +  " \(modul.id + 1)." + " " + modul.title)
                                                 .foregroundColor(.white).bold().font(Font.title2)
-                                                .navigationBarTitle("Beginner's course")
+                                                .navigationBarTitle("Начальный курс")
                                         }
                                     }
                                 }
                             }
+                            .onAppear {
+                                    if inputCode == promoCode {
+                                        cellEnabled = true
+                                    }
+                                }
                             .buttonStyle(PlainButtonStyle())
-                            .disabled(modul.id >= 3 && inputText != promoCode && !cellEnabled)
+                            .disabled(modul.id >= 1 && inputText != promoCode && !cellEnabled)
                             .onTapGesture {
-                                if modul.id < 3 {
+                                if modul.id < 1 {
                                     self.isActive[modul.id] = true }
                                 else {
                                         if let code = inputCode,
@@ -74,7 +80,7 @@ struct ContentView: View {
                         VStack {
                             Spacer()
                             Button(action: {
-                                guard let url = URL(string: "https://www.instagram.com/") else { return }
+                                guard let url = URL(string: "https://www.instagram.com/deshar_school/") else { return }
                                 UIApplication.shared.open(url)
                             }) {
                                 Text("Получить код").bold()
@@ -113,7 +119,7 @@ struct ContentView: View {
 
 
     
-    struct ContentView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
         }

@@ -11,23 +11,27 @@ struct TextsSwiftUIView: View {
     var texts = Texts.getTexts()
     
     var body: some View {
-            NavigationView {
+        NavigationView {
                 VStack {
                     EmbedView(videoID: "l9updbL58xY")
                         .cornerRadius(20)
                         .frame(height: 300)
                         .padding()
-                        
-                List(texts) { text in
-                    NavigationLink(destination: FullTextSwiftUIView(text: text)) {
+                        .background(Color.cyan)
+                    
+                    List(texts) { text in
+                        NavigationLink(destination: FullTextSwiftUIView(text: text)) {
                             Text(text.title)
+                        }
+                        .foregroundColor(.white).bold().shadow(color: .white, radius: 4)
+                        .listRowBackground(Color.cyan)
+                        .listRowSeparator(.visible)
                     }
+                    .navigationTitle("Тексты")
                 }
-                .navigationTitle("Texts")
             }
         }
     }
-}
 
 struct TextsSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
