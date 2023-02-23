@@ -22,51 +22,61 @@ struct FullTextSwiftUIView: View {
             VStack {
                 Text(text.title).font(.largeTitle).bold().foregroundColor(.black)
                 
-                Text(text.mainText.rawValue).bold()
-                    .padding()
-                    .background(.cyan)
-                    .foregroundColor(.white)
+                Image(text.title)
+                    .resizable()
+                    .frame(width:300, height: 200)
+                    .cornerRadius(20)
+                
+                Text(text.mainText.rawValue)
+                    .padding(20)
+                    .background(Color(.systemGray5))
+                    .foregroundColor(.black)
                     .cornerRadius(20)
                     .padding()
                 
                 Button(action: {
                     withAnimation { self.textIsShown.toggle()}}) {
-                    if textIsShown {
-                        Text("Скрыть перевод")
-                    } else {
-                        Text("Показать перевод")
+                        if textIsShown {
+                            Text("Скрыть перевод")
+                        } else {
+                            Text("Показать перевод")
+                        }
                     }
-                }
                 if textIsShown {
                     withAnimation {
                         Text(text.translation.rawValue)
                             .foregroundColor(.white)
-                            .padding()
+                            .padding(20)
                             .background(Color.blue)
                             .cornerRadius(10)
                             .padding()
                             .bold()
                             .opacity(textIsShown ? 1 : 0)
                     }.animation(.easeIn(duration: 1))
+                        
                 }
-                
-                Button(action: { self.startRecord(audioUrl: text.audioRecord.rawValue) },
-                       label: {
-                    if isPlaying == false {
-                        Label("Play", systemImage: "play")
-                    } else {
-                        Label("Pause", systemImage: "pause")
+                HStack {
+                    Button(action: { rewind(5)}) {
+                        Label("5", systemImage: "arrow.counterclockwise")
+                    }
+                    Button(action: { self.startRecord(audioUrl: text.audioRecord.rawValue) },
+                           label: {
+                        if isPlaying == false {
+                            Label("Play", systemImage: "play")
+                        } else {
+                            Label("Pause", systemImage: "pause")
+                        }
+                    })
+                    Button(action: { forward(5)}) {
+                        Label("5", systemImage: "arrow.clockwise")
                     }
                 }
-                )
-                
-                
-                .buttonStyle(GrowingButton())
-                Slider(value: $progress, in: 0...100, onEditingChanged: {_ in
-                    player.currentTime = Double(self.progress) / 100.0 * player.duration
-                }).padding([.leading, .trailing])
-            }
-            
+                    
+                    .buttonStyle(GrowingButton())
+                    Slider(value: $progress, in: 0...100, onEditingChanged: {_ in
+                        player.currentTime = Double(self.progress) / 100.0 * player.duration
+                    }).padding([.leading, .trailing])
+                }
         }
         .onDisappear {
             if player != nil {
@@ -108,6 +118,28 @@ struct FullTextSwiftUIView: View {
         isPlaying.toggle()
 
         }
+    func rewind(_ seconds: Double) {
+        guard player != nil else {
+            return
+        }
+        var currentTime = player.currentTime - seconds
+        if currentTime < 0 {
+            currentTime = 0
+        }
+        player.currentTime = currentTime
+        progress = currentTime / player.duration * 100.0
+    }
+    func forward(_ seconds: Double) {
+        guard player != nil else {
+            return
+        }
+        var currentTime = player.currentTime + seconds
+        if currentTime > player.duration {
+            currentTime = player.duration
+        }
+        player.currentTime = currentTime
+        progress = currentTime / player.duration * 100.0
+    }
     }
 
 

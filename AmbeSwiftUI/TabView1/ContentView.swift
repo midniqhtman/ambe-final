@@ -39,7 +39,7 @@ struct ContentView: View {
                                         ZStack {
                                             tableViewCell()
                                             Text("Урок" +  " \(modul.id + 1)." + " " + modul.title)
-                                                .foregroundColor(.white).bold().font(Font.title2)
+                                                .foregroundColor(.white).bold().font(Font.title2).shadow(color:.white,radius: 10)
                                                 .navigationBarTitle("Начальный курс")
                                         }
                                     }
@@ -107,11 +107,11 @@ struct ContentView: View {
                 
 //: TAB ITEMS
                 .navigationBarHidden(true)
-                .tabItem { Label("Видео", systemImage: "video")}
+                .tabItem { Label("Уроки", systemImage: "brain.head.profile")}
                                 TextsSwiftUIView()
-                .tabItem { Label("Тексты", systemImage: "book") }
+                .tabItem { Label("Тексты", systemImage: "books.vertical") }
                                 ExercisesSwiftUIView()
-                .tabItem { Label("Слова", systemImage: "pencil")}
+                .tabItem { Label("Слова", systemImage: "highlighter")}
                             }
                         }
                     }

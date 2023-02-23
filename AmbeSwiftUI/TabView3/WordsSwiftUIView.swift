@@ -22,16 +22,24 @@ struct WordsSwiftUIView: View {
     var body: some View {
             VStack {
                 Text(title).font(.largeTitle).bold()
-                Button(action: { self.startRecord(audioUrl: title) },
-                       label: {
-                    if isPlaying == false {
-                        Label("Play", systemImage: "play")
-                    } else {
-                        Label("Pause", systemImage: "pause")
+                HStack {
+                    Button(action: { rewind(5)}) {
+                        Label("5", systemImage: "arrow.counterclockwise")
                     }
-                }
-                )
-                .buttonStyle(GrowingButton())
+                    Button(action: { self.startRecord(audioUrl: title) },
+                           label: {
+                        if isPlaying == false {
+                            Label("Play", systemImage: "play")
+                        } else {
+                            Label("Pause", systemImage: "pause")
+                        }
+                    }
+                    )
+                    Button(action: { forward(5)}) {
+                        Label("5", systemImage: "arrow.clockwise")
+                    }
+                } .buttonStyle(GrowingButton())
+
                 Slider(value: $progress, in: 0...100, onEditingChanged: {_ in
                     player.currentTime = Double(self.progress) / 100.0 * player.duration
                 }).padding([.leading, .trailing])
@@ -89,8 +97,29 @@ struct WordsSwiftUIView: View {
                   }
               }
         isPlaying.toggle()
-
         }
+    func forward(_ seconds: Double) {
+        guard player != nil else {
+            return
+        }
+        var currentTime = player.currentTime + seconds
+        if currentTime > player.duration {
+            currentTime = player.duration
+        }
+        player.currentTime = currentTime
+        progress = currentTime / player.duration * 100.0
+    }
+    func rewind(_ seconds: Double) {
+        guard player != nil else {
+            return
+        }
+        var currentTime = player.currentTime - seconds
+        if currentTime < 0 {
+            currentTime = 0
+        }
+        player.currentTime = currentTime
+        progress = currentTime / player.duration * 100.0
+    }
 
     }
 

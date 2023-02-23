@@ -17,14 +17,14 @@ struct TextsSwiftUIView: View {
                         .cornerRadius(20)
                         .frame(height: 300)
                         .padding()
-                        .background(Color.cyan)
+                        .background(Color.white)
                     
                     List(texts) { text in
                         NavigationLink(destination: FullTextSwiftUIView(text: text)) {
                             Text(text.title)
                         }
                         .foregroundColor(.white).bold().shadow(color: .white, radius: 4)
-                        .listRowBackground(Color.cyan)
+                        .listRowBackground(Color.blue)
                         .listRowSeparator(.visible)
                     }
                     .navigationTitle("Тексты")
