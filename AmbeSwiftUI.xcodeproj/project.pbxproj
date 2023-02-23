@@ -29,6 +29,7 @@
 		081B921329971CF900F38654 /* Первые глаголы.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920829971CF900F38654 /* Первые глаголы.m4a */; };
 		081B921429971CF900F38654 /* Прилагательные.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 081B920929971CF900F38654 /* Прилагательные.m4a */; };
 		081B92172998359500F38654 /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081B92162998359500F38654 /* RealmDatabase.swift */; };
+		0838FA3B29A7F57500D40E86 /* SplashScreenUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838FA3A29A7F57500D40E86 /* SplashScreenUIView.swift */; };
 		0883A4662970CC4900CB6CC5 /* WordsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */; };
 		0885AF6E29621E860058957F /* AmbeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */; };
 		0885AF7029621E860058957F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6F29621E860058957F /* ContentView.swift */; };
@@ -69,8 +70,9 @@
 		081B920829971CF900F38654 /* Первые глаголы.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Первые глаголы.m4a"; sourceTree = "<group>"; };
 		081B920929971CF900F38654 /* Прилагательные.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Прилагательные.m4a"; sourceTree = "<group>"; };
 		081B92162998359500F38654 /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
+		0838FA3A29A7F57500D40E86 /* SplashScreenUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUIView.swift; sourceTree = "<group>"; };
 		0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSwiftUIView.swift; sourceTree = "<group>"; };
-		0885AF6A29621E860058957F /* AmbeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0885AF6A29621E860058957F /* Учи английский с Deshar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Учи английский с Deshar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbeSwiftUIApp.swift; sourceTree = "<group>"; };
 		0885AF6F29621E860058957F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0885AF7129621E880058957F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 		0885AF6B29621E860058957F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0885AF6A29621E860058957F /* AmbeSwiftUI.app */,
+				0885AF6A29621E860058957F /* Учи английский с Deshar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +127,7 @@
 		0885AF6C29621E860058957F /* AmbeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0838FA3A29A7F57500D40E86 /* SplashScreenUIView.swift */,
 				081B92152998358100F38654 /* Realm */,
 				08A69C1A29888088000D5A6E /* audiofiles */,
 				0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */,
@@ -233,7 +236,7 @@
 				08C7B0AC2990868200F85309 /* RealmSwift */,
 			);
 			productName = AmbeSwiftUI;
-			productReference = 0885AF6A29621E860058957F /* AmbeSwiftUI.app */;
+			productReference = 0885AF6A29621E860058957F /* Учи английский с Deshar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08014105296F765800F2CDDD /* ExercisesSwiftUIView.swift in Sources */,
+				0838FA3B29A7F57500D40E86 /* SplashScreenUIView.swift in Sources */,
 				081B92172998359500F38654 /* RealmDatabase.swift in Sources */,
 				08E83FAC297C851400F74DF2 /* CardSwiftUI.swift in Sources */,
 				0801410B296F81F600F2CDDD /* FullTextSwiftUIView.swift in Sources */,
@@ -466,7 +470,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = chechen.AmbeSwiftUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Учи английский с Deshar";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -496,7 +500,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = chechen.AmbeSwiftUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Учи английский с Deshar";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

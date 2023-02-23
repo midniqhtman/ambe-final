@@ -12,7 +12,7 @@ struct AmbeSwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenUIView()
         }
     }
 }

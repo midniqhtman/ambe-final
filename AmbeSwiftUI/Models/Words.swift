@@ -251,7 +251,7 @@ struct Texts: Identifiable {
          Texts(title: "Bird Island", mainText: .birdIsland, id: 5, audioRecord: .birdIsland, translation: .birdIslandRus),
          Texts(title: "The perfect day", mainText: .perfectDay, id: 6, audioRecord: .thePerfectDay, translation: .perfectDayRus),
          Texts(title: "At the restaraunt", mainText: .atTheRestaraunt, id: 7, audioRecord: .atTheRestaraunt, translation: .atTheRestarauntRus),
-         Texts(title: "Migel", mainText: .migel, id: 8, audioRecord: .armandoAudio, translation: .migelRus)
+         Texts(title: "Migel", mainText: .migel, id: 8, audioRecord: .migel, translation: .migelRus)
         
         ]
     }
@@ -319,6 +319,7 @@ struct Texts: Identifiable {
         case birdIsland = "Bird Island"
         case atTheRestaraunt = "At the restaraunt"
         case tripToGermany = "Trip to Germany"
+        case migel = "Migel"
     }
     
     enum wordsAudios: String {

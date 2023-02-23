@@ -62,6 +62,8 @@ struct QuizSwiftUI: View {
     var body: some View {
         VStack {
             Text(title).font(.title).bold()
+                .padding()
+            Text("Нажми на карту, чтобы увидеть перевод").font(.title3)
             HStack {
                 Image(systemName: "arrowshape.left.fill")
                     .resizable()
