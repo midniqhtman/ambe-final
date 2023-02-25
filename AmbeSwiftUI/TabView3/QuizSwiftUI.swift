@@ -54,16 +54,16 @@ struct QuizSwiftUI: View {
     @State var contentRotation = 0.0
     @State var cardWord: String
     
+    
     var learnedWordsCount = 0
     var title: String
     var body: some View {
+        
         VStack {
             Text(title).font(.title).bold()
                 .padding()
             ZStack {
-                if stuff.quizIsFinished {
                     Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.black).font(.title2)
-                }
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
                     CardSwiftUI(words: words,
                                 stuff: stuff,
@@ -80,8 +80,10 @@ struct QuizSwiftUI: View {
                         .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
                 }
             }
-        }.onAppear {
+        }
+        .onAppear {
             stuff.setWordsIndexes(words: words)
+            stuff.setupCard()
         }
     }
         
