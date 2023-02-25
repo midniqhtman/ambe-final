@@ -25,7 +25,7 @@ struct TextsSwiftUIView: View {
                         NavigationLink(destination: FullTextSwiftUIView(text: text)) {
                             Text(text.title)
                         }
-                        .foregroundColor(.black).bold()
+                        .foregroundColor(.black)
                         .listRowBackground(Color(.systemGray5))
                         .listRowSeparator(.visible)
                     }
