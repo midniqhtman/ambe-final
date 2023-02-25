@@ -29,16 +29,16 @@ struct Topic: Identifiable {
     
     static func getTopics() -> [Topic] {
         [
-            Topic(id: 0, title: "Present Simple", topicDescription: .presentSimpleDescription, importantStuff: .presentSimpleImportant, youtubeurl: .presentSimpleUrl),
-            Topic(id: 1, title: "Conjuctions and Prepositions", topicDescription: .conjuctionsDescription, importantStuff: .presAndConsImportant, youtubeurl: .consAndPrepsUrl),
-            Topic(id: 2, title: "To Be", topicDescription: .toBe, importantStuff: .tobeImportant, youtubeurl: .toBeUrl),
-            Topic(id: 3, title: "Future Simple", topicDescription: .futureSimple, importantStuff: .futureSimpleImportant, youtubeurl: .futureSimpleUrl),
-            Topic(id: 4, title: "Past Simple", topicDescription: .pastSimple, importantStuff: .pastSimpleImportant, youtubeurl: .pastSimpleUrl),
-            Topic(id: 5, title: "Adjectives", topicDescription: .adjectivs, importantStuff: .adjectives, youtubeurl: .adjectivesUrl),
-            Topic(id: 6, title: "Possessive Case", topicDescription: .possessiveCase, importantStuff: .possessiveCase, youtubeurl: .posessiveCaseUrl),
-            Topic(id: 7, title: "Objective Pronouns", topicDescription: .objectivePronouns, importantStuff:.objectivePronouns, youtubeurl: .objectivePronounsUrl),
-            Topic(id: 8, title: "Modal Verbs", topicDescription: .ModalVerbs, importantStuff: .modalVerbs, youtubeurl: .modalVerbsUrl),
-            Topic(id: 9, title: "Articles", topicDescription: .articles, importantStuff: .articles, youtubeurl: .articlesUrl)
+            Topic(id: 0, title: "Настоящее время", topicDescription: .presentSimpleDescription, importantStuff: .presentSimpleImportant, youtubeurl: .presentSimpleUrl),
+            Topic(id: 1, title: "Союзы и предлоги", topicDescription: .conjuctionsDescription, importantStuff: .presAndConsImportant, youtubeurl: .consAndPrepsUrl),
+            Topic(id: 2, title: "Глагол To be", topicDescription: .toBe, importantStuff: .tobeImportant, youtubeurl: .toBeUrl),
+            Topic(id: 3, title: "Будущее время", topicDescription: .futureSimple, importantStuff: .futureSimpleImportant, youtubeurl: .futureSimpleUrl),
+            Topic(id: 4, title: "Прошешдшее время", topicDescription: .pastSimple, importantStuff: .pastSimpleImportant, youtubeurl: .pastSimpleUrl),
+            Topic(id: 5, title: "Прилагательные", topicDescription: .adjectivs, importantStuff: .adjectives, youtubeurl: .adjectivesUrl),
+            Topic(id: 6, title: "Притяжательный падеж", topicDescription: .possessiveCase, importantStuff: .possessiveCase, youtubeurl: .posessiveCaseUrl),
+            Topic(id: 7, title: "Объектные местоимения", topicDescription: .objectivePronouns, importantStuff:.objectivePronouns, youtubeurl: .objectivePronounsUrl),
+            Topic(id: 8, title: "Модальные глаголы", topicDescription: .ModalVerbs, importantStuff: .modalVerbs, youtubeurl: .modalVerbsUrl),
+            Topic(id: 9, title: "Артикли", topicDescription: .articles, importantStuff: .articles, youtubeurl: .articlesUrl)
         ]
     }
     }
@@ -46,9 +46,9 @@ struct Topic: Identifiable {
 enum YoutubeURL: String {
     case presentSimpleUrl = "wIJeRkZWACk&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=4"
     case futureSimpleUrl = "DvSDY8ZIr1U&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=7&t=59s"
-    case pastSimpleUrl = "gMHxEO3LrQg"
+    case pastSimpleUrl = "KvRD9pwc32E&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=8&t=1s"
     case consAndPrepsUrl = "SY3K7jzfJoE&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=5"
-    case toBeUrl = "gZE0DdpwRew"
+    case toBeUrl = "rLLmTPpydws&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=6"
     case modalVerbsUrl = "CzPEAe8Q_Yg&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=1"
     case adjectivesUrl = "Eu3t2zRh5mI&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=3"
     case posessiveCaseUrl = "gZE0DdpwRew3"
@@ -59,15 +59,15 @@ enum YoutubeURL: String {
 enum ImportantStuff: String {
     case presentSimpleImportant = """
     3 вида предложений:
-    1) Утверждение - I play games
-    2) Вопрос - Do you speak Spanish?
-    3) Отрицание - We don't like chocolate
+    1. Утверждение - I play games
+    2. Вопрос - Do you speak Spanish?
+    3. Отрицание - We don't like chocolate
     """
     case futureSimpleImportant = """
     3 вида предложений:
-    1) Утверждение - We will go to America
-    2) Вопрос - Will we go to America? (во время вопроса ставим WILL в начало предложения)
-    3) Отрицание - We will not go to America (во время отрицаем добавляем NOT к WILL)
+    1. Утверждение - We will go to America
+    2. Вопрос - Will we go to America? (во время вопроса ставим WILL в начало предложения)
+    3. Отрицание - We will not go to America (во время отрицаем добавляем NOT к WILL)
     
     WILL BE - буду
     
@@ -85,16 +85,15 @@ enum ImportantStuff: String {
     We / They / You - were
     
     3 вида предложений:
-    1) Утверждение - John was at school
-    2) Вопрос - Was John at school? (когда задаем вопрос TO BE ставим в начало предложения)
-    3) Отрицание - John was not at school (когда отрицаем добавляем NOT к TO BE)
+    1. Утверждение - John was at school
+    2. Вопрос - Was John at school? (когда задаем вопрос TO BE ставим в начало предложения)
+    3. Отрицание - John was not at school (когда отрицаем добавляем NOT к TO BE)
     
     WAS и WERE это глагол TO BE в прошедшем времени
     
     Неправильные глаголы в прошедшем времени используются только в утверждении
     
     Например:
-    
     We went to hospital - Мы пошли в больницу
     Но если задаем вопрос или отрицание используем глагол в настоящем времени
     Did you go to hospital yesterday? - Ты пошел в больницу вчера?
@@ -111,9 +110,9 @@ enum ImportantStuff: String {
     To be имеет 3 формы - AM / IS / ARE
     
     3 вида предложений:
-    1) Утверждение - He is a doctor
-    2) Вопрос - Is he a doctor (когда задаем вопрос TO BE ставим в начало предложения)
-    3) Отрицание - He is not a doctor (когда отрицаем добавляем NOT к TO BE)
+    1. Утверждение - He is a doctor
+    2. Вопрос - Is he a doctor (когда задаем вопрос TO BE ставим в начало предложения)
+    3. Отрицание - He is not a doctor (когда отрицаем добавляем NOT к TO BE)
     """
     case presAndConsImportant = """
     Некоторые предлоги мы также используем со временем
@@ -146,9 +145,9 @@ enum ImportantStuff: String {
     """
     case modalVerbs = """
     3 вида предложений:
-    1) Утверждение - We must go
-    2) Вопрос - Can you help me? (когда задаем вопрос модальный глагол ставим в начало предложения)
-    3) Отрицание - You should not do it (когда отрицаем добавляем NOT к модальному глаголу)
+    1. Утверждение - We must go
+    2. Вопрос - Can you help me? (когда задаем вопрос модальный глагол ставим в начало предложения)
+    3. Отрицание - You should not do it (когда отрицаем добавляем NOT к модальному глаголу)
     """
     case articles = """
     Артикли используем только с существительными
@@ -166,17 +165,14 @@ enum TopicsDescriptions: String {
     Настоящее время (Present Simple) указывает на то что мы делаем повседневно.
     
     Например:
-    
-    Я живу в Калифорнии - I live in California,
+    -Я живу в Калифорнии - I live in California,
     Я работаю в Италии - I work in Italy.
     
-    Чтобы задать вопрос мы используем дополнительное слово DO.
-    
+    -Чтобы задать вопрос мы используем дополнительное слово DO.
     Do you work in office? - Ты работаешь в офисе?
     Do you need help? = Тебе нужна помощь?
     
-    Чтобы задать отрицание мы используем слово DON'T (DO NOT)
-    
+    -Чтобы задать отрицание мы используем слово DON'T (DO NOT)
     I don't like coffee - Я не люблю кофе
     They don't learn Spanish - Они не учат испанский
     """
@@ -185,7 +181,8 @@ enum TopicsDescriptions: String {
     Буквально от 1-2 союзов ваше предложение может превратиться
     из какого-то кустика в огромный сад.
     
-    Например: I live in New York - Я живу в Нью-Йорке.
+    Например:
+    I live in New York - Я живу в Нью-Йорке.
     А теперь чуть дополним его союзами и предлогами.
     I live in New York WITH my brother AND we like this city BUT we want to go to Chicago.
     
@@ -206,17 +203,14 @@ enum TopicsDescriptions: String {
     """
     case toBe = """
     В английском языке есть два вида выражений:
-    
-    1) С действиями, когда кто-то что-то делает
-    2) Без действий, когда никто ничего не делает
+    1. С действиями, когда кто-то что-то делает
+    2. Без действий, когда никто ничего не делает
     
     Когда у нас нет никаких действий мы ОБЯЗАТЕЛЬНО используем TO BE
     AM / ARE / IS
     
     I - am
-    
     You / We / They - are
-    
     He / She / It / любое имя - is
     
     Например:
@@ -230,40 +224,34 @@ enum TopicsDescriptions: String {
     Образуется путем добавления дополнительного слова WILL
         
     Например:
-        
-    Я буду играть - I will play,
+    -Я буду играть - I will play,
     Мы купим новую квартиру - We will buy new flat.
         
-    Чтобы задать вопрос слово WILL ставим в начало предложения.
-        
+    -Чтобы задать вопрос слово WILL ставим в начало предложения.
     Will you eat this cake? - Ты съешь этот торт?
     Will they come tomorrow? = Они придут завтра?
         
-    Чтобы задать отрицание мы используем слово WON'T (WILL NOT)
-        
+    -Чтобы задать отрицание мы используем слово WON'T (WILL NOT)
     I won't delete this app - Я не удалю это приложение
     He won't fail me - Он не подведет меня
     
     Если в предложении нет действия, мы просто используем WILL BE - Буду
     Например:
-    Я буду в Италии завтра - I will be in Italy tomorrow
+    -Я буду в Италии завтра - I will be in Italy tomorrow
     """
     case pastSimple = """
     Прошедшее время (Past Simple) указывает на то что мы сделали в прошлом.
     Образуется путем добавления дополнительного окончание ED к глаголу
         
     Например:
+    -Я жил в Германии - I lived in Germany
+    Мы выучили английский - We learned English
         
-    Я жил в Германии - I lived in Germany
-    Мы учили английский - We learned English
-        
-    Чтобы задать вопрос слово Did ставим в начало предложения.
-        
+    -Чтобы задать вопрос слово Did ставим в начало предложения.
     Did you eat this cake? - Ты съел этот торт?
     Did they come yesterday? = Они пришли вчера?
         
-    Чтобы задать отрицание мы используем слово DIDN'T (DID NOT)
-        
+    -Чтобы задать отрицание мы используем слово DIDN'T (DID NOT)
     I didn't see you in the park - Я не видел тебя в парке
     He didn't know Jason - Он не знал Джейсона
     
@@ -289,9 +277,9 @@ enum TopicsDescriptions: String {
     case objectivePronouns = """
     Объектные местоимения - это местоимения, которые мы используем в 3-х случаях
     
-    1) Во время просьбы или приказа
-    2) С предлогами (with, of, for, from и тд.)
-    3) Когда отвечаем на вопрос КОМУ?
+    1. Во время просьбы или приказа
+    2. С предлогами (with, of, for, from и тд.)
+    3. Когда отвечаем на вопрос КОМУ?
     
     me - мне
     you - тебе
@@ -325,7 +313,7 @@ enum TopicsDescriptions: String {
     case articles = """
     Про артикли можно много говорить, но краткая информация на видео.
     От себя могу сказать что если вы их не используете в речи, ничего страшного.
-    В основном они заметны на письме
+    В основном они заметны на письме.
     """
     
 }

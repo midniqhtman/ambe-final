@@ -10,13 +10,13 @@ import Combine
 
 class Stuff: ObservableObject  {
     let objectWillChange = PassthroughSubject<Stuff, Never>()
+    
     @Published var cardWord = ""
     @Published var translateIsShow = false
     @Published var keyWord = ""
     @Published var valueWord = ""
     @Published var indexOf = 0
     @Published var quizIsFinished = false
-    
     @Published var rightCards = 0
     @Published var wrongCards = 0
 
@@ -25,10 +25,10 @@ class Stuff: ObservableObject  {
         if indexOf < words.keys.count {
             keyWord = Array(words.keys)[indexOf]
             valueWord = Array(words.values)[indexOf]
-            quizIsFinished = false
             setupCard()
         } else {
             indexOf = 0
+            quizIsFinished = true
         }
     }
     
@@ -47,9 +47,6 @@ struct QuizSwiftUI: View {
     @StateObject var stuff = Stuff()
     
     @State var words: [String : String]
-    
-    var learnedWordsCount = 0
-    
     @State var offset = CGSize.zero
     @State var color = Color.cyan
     @State var isFlipped = false
@@ -57,46 +54,31 @@ struct QuizSwiftUI: View {
     @State var contentRotation = 0.0
     @State var cardWord: String
     
+    var learnedWordsCount = 0
     var title: String
-    
     var body: some View {
         VStack {
             Text(title).font(.title).bold()
                 .padding()
-            Text("Нажми на карту, чтобы увидеть перевод").font(.title3)
-            HStack {
-                Image(systemName: "arrowshape.left.fill")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.red)
-                Text("Если не знаешь смахни влево").font(.title2)
-            }
             ZStack {
-                Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.blue).bold().font(.title2)
-                
+                if stuff.quizIsFinished {
+                    Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.black).font(.title2)
+                }
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
                     CardSwiftUI(words: words,
                                 stuff: stuff,
-                                indexOf: $stuff.indexOf,
+                                isFlipped: $isFlipped, indexOf: $stuff.indexOf,
                                 rightCards: $stuff.rightCards,
-                                wrongCards: $stuff.wrongCards)
+                                wrongCards: $stuff.wrongCards, imageName: isFlipped ? "eye.slash" : "eye.slash")
                         .onTapGesture {
-                            print(stuff.indexOf)
-                        flipCard()
+                            isFlipped.toggle()
+                            flipCard()
                             stuff.translateIsShow.toggle()
                             stuff.setupCard()
                     }
                         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
                         .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
                 }
-                
-            }
-            HStack{
-                Text("Если знаешь смахни вправо").font(.title2)
-                Image(systemName: "arrowshape.right.fill")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.green)
             }
         }.onAppear {
             stuff.setWordsIndexes(words: words)
@@ -108,18 +90,16 @@ struct QuizSwiftUI: View {
             stuff.setupCard()
         }
         
-    func flipCard() {
+        func flipCard() {
         withAnimation(Animation.linear(duration: 0.3)) {
             cardRotation += 180
             isFlipped.toggle()
         }
-        
         withAnimation(Animation.linear(duration: 0.001)) {
             contentRotation += 180
             isFlipped.toggle()
         }
     }
-    
 }
   
     struct QuizSwiftUI_Previews: PreviewProvider {

@@ -54,7 +54,7 @@ struct WordsSwiftUIView: View {
                     }
                 }
                 NavigationLink(destination: QuizSwiftUI(words: words, cardWord: "", title: title), isActive: $goesToDetail) {
-                    Button("StartQuiz") {
+                    Button("Начать тест") {
                       goesToDetail = true
                     }.buttonStyle(GrowingButton())
                 }

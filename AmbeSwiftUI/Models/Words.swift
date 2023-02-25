@@ -257,21 +257,32 @@ struct Texts: Identifiable {
     }
     enum mainTextEnum: String {
         case armando = """
-        Hello, I want to tell you about my best friend. His name is Armando, he lives in Milan. He goes to school, and he speaks Spanish. He likes to play football. Armando is a very nice boy, he always helps me with homework. After school, we play football together. Armando likes to play football, and watch films. He has a family. He has parents and sister Monica. Monica is a very good girl. She works in a hospital. She is a nurse. Armando wants to be a doctor.)
+        Hello, I want to tell you about my best friend. His name is Armando, he lives in Milan. He goes to school, and he speaks Spanish.
+        He likes to play football. Armando is a very nice boy, he always helps me with homework.
+        After school, we play football together. Armando likes to play football, and watch films. He has a family.
+        He has parents and sister Monica. Monica is a very good girl. She works in a hospital. She is a nurse. Armando wants to be a doctor.
         """
         case hobbie = """
-        Hi, my name is John and I like to read books. It is my hobby. I like to read detectives, my favourite(любимый) book is Sherlock Holmes by A.С.Doyle. I think that(что) Sherlock Holmes is a very smart(умный) man. Sherlock has a friend who helps him. His name is Dr. John Watson.
-        They are a good team. They live in London in Baker-Street. Sherlock has an older brother, his name is Mycroft Holmes and he is also very smart. I want to learn English, because I want to read books in English.
+        Hi, my name is John and I like to read books. It is my hobby. I like to read detectives, my favourite(любимый) book is Sherlock Holmes by A.С.Doyle.
+        I think that(что) Sherlock Holmes is a very smart(умный) man. Sherlock has a friend who helps him. His name is Dr. John Watson.
+        They are a good team. They live in London in Baker-Street. Sherlock has an older brother, his name is Mycroft Holmes and he is also very smart.
+        I want to learn English, because I want to read books in English.
         Every week I go to library(библиотека) and take(взять) one new book.
         Sometimes I go to bookshop and buy new books.
         """
         case hospital = """
-        I was at the hospital with my grandfather yesterday. My grandfather’s name is Antonio, he is 65. And he has bad health because he is old. I went to hospital to help him. Elderly people often need help. At the hospital, we waited(ждали) for a doctor for 15 minutes. Doctor was a nice(приятной) woman. She looked(посмотрела) at my grandfather and gave(дала) him some pills(таблетки). She said(сказала) that everything(все) is fine.
-        My grandfather was a painter(художник) in the past(прошлое). He painted(рисовал) very beautiful pictures of nature(природа). And he still paints them(их). My grandmother’s name is Lianna, and she was a singer(певица). She never goes to the hospitals. She has good health. And she sings(поет) sometimes. She cooks the best(лучшая) pizza.
+        I was at the hospital with my grandfather yesterday. My grandfather’s name is Antonio, he is 65. And he has bad health because he is old.
+        I went to hospital to help him. Elderly people often need help. At the hospital, we waited(ждали) for a doctor for 15 minutes.
+        Doctor was a nice(приятной) woman. She looked(посмотрела) at my grandfather and gave(дала) him some pills(таблетки).
+        She said(сказала) that everything(все) is fine.
+        My grandfather was a painter(художник) in the past(прошлое). He painted(рисовал) very beautiful pictures of nature(природа). And he still paints them(их).
+        My grandmother’s name is Lianna, and she was a singer(певица). She never goes to the hospitals.
+        She has good health. And she sings(поет) sometimes. She cooks the best(лучшая) pizza.
 
         """
         case johnAndJim = """
-        Wild West, America. Two cowboy-friends saw a piece of paper with a text on it. 100 dollars for one indian’s scalp. They went to the Indian territory, killed Indian, took his scalp. But it was evening already, so they decided to sleep in a tent on indian’s territory.
+        Wild West, America. Two cowboy-friends saw a piece of paper with a text on it. 100 dollars for one indian’s scalp.
+        They went to the Indian territory, killed Indian, took his scalp. But it was evening already, so they decided to sleep in a tent on indian’s territory.
         Jim wakes up in the morning, goes out the tent and sees dozens of Indians around them. Jim is shocked, he goes back to the tent, wakes up John and says:
         -John, John wake up. We are millionaires
 
@@ -288,7 +299,12 @@ struct Texts: Identifiable {
         """
         
         case birdIsland = """
-        Bird Island is an important scientific research centre. Every year lots of scientists visit the island, but Melanie Szabo, a professor of zoology, work. there all year. Sven Olafsson, who is from Bergen in Norway, also works on the island. He studies seals and Melanie watches penguins. The penguins come to the beaches on the north of the island and Melanie often works there alone. Sven never works alone - he always works with the other scientists because the male seals are big and sometimes dangerous! Sven loves his job, but he works very hard and he hardly ever has free time.
+        Bird Island is an important scientific research centre.
+        Every year lots of scientists visit the island, but Melanie Szabo, a professor of zoology, work. there all year.
+        Sven Olafsson, who is from Bergen in Norway, also works on the island. He studies seals and Melanie watches penguins.
+        The penguins come to the beaches on the north of the island and Melanie often works there alone.
+        Sven never works alone - he always works with the other scientists because the male seals are big and sometimes dangerous!
+        Sven loves his job, but he works very hard and he hardly ever has free time.
         For Melanie, her favourite time is Saturday night.
         One of the scientists usually makes a big dinner for the group and they watch a movie together, relax or play games.
 

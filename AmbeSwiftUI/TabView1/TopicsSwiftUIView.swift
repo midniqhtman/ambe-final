@@ -15,30 +15,32 @@ struct TopicsSwiftUI: View {
             ScrollView {
                 VStack {
                     EmbedFrameView(topic: topic)
+                        .frame(width: geometry.size.width, height: 250)
                     EmbedView(videoID: topic.youtubeurl.rawValue)
+                    Text(topic.title).font(.title2).bold()
+                        .frame(maxWidth:.infinity, alignment: .leading)
+                        .padding(.leading, 25)
                     HStack {
                         Spacer()
                         Text(topic.topicDescription.rawValue)
-                            .padding()
-                            .foregroundColor(.white)
-                            .bold()
-                            .background(Color.cyan)
-                            .cornerRadius(geometry.size.height * 0.05)
-                            .shadow(color: .cyan, radius: 10)
+                            .font(.system(size: 20))
+                            .frame(maxWidth:.infinity, alignment: .leading)
+                            .padding(25)
+                            .foregroundColor(.black)
                         Spacer()
                     }
+                    Text("Важно").font(.title2).bold()
+                        .frame(maxWidth:.infinity, alignment: .leading)
+                        .padding(.leading, 25)
                     HStack {
-                        Spacer()
                         Text(topic.importantStuff.rawValue)
-                            .padding()
+                            .font(.system(size: 20))
+                            .frame(maxWidth:.infinity, alignment: .leading)
+                            .padding(.leading, 25).padding(.top, 10)
                             .foregroundColor(.black)
-                            .bold()
-                            .background(Color.yellow)
-                            .cornerRadius(geometry.size.height * 0.05)
-                            .shadow(color: .cyan, radius: 10)
-                        Spacer()
                     }
                 }
+                .background(Color(.systemGray6))
             }
         }
     }
@@ -51,18 +53,12 @@ struct TopicsSwiftUI_Previews: PreviewProvider {
 }
 
 struct EmbedFrameView: View {
-        var topic: Topic
-        var body: some View {
-            VStack {
-                HStack {
-                    VStack {
-                        EmbedView(videoID: topic.youtubeurl.rawValue)
-                            .frame(width: 360, height: 200, alignment: .leading)
-                            .cornerRadius(20)
-                    }
-                }
-                .cornerRadius(15)
-            }
+    var topic: Topic
+    var body: some View {
+        VStack {
+            EmbedView(videoID: topic.youtubeurl.rawValue)
         }
     }
+}
+    
 

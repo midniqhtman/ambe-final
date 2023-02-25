@@ -13,20 +13,19 @@ struct CardSwiftUI: View {
     @ObservedObject var stuff: Stuff
    
     @State var offset = CGSize.zero
-    @State var color = Color.cyan
+    @State var color = Color(.systemGray4)
     @State var cardRotation = 0.0
     @State var contentRotation = 0.0
     @State var cardIsSwiped = false
-    
     @State var quizIsFinished = false
-    @State var isFlipped = false
     @State var isSwiped = false
-    @Binding var indexOf: Int
     
+    @Binding var isFlipped: Bool
+    @Binding var indexOf: Int
     @Binding var rightCards: Int
     @Binding var wrongCards: Int
 
-
+    let imageName: String
     
     var body: some View {
         ZStack {
@@ -35,13 +34,34 @@ struct CardSwiftUI: View {
                 .frame(width: 300, height:200)
                 .cornerRadius(20)
                 .foregroundColor(color)
-                .shadow(color: .gray, radius: 4)
             Text(stuff.cardWord)
                 .bold()
                 .font(.title2)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .bold()
-                .shadow(color: .white, radius: 4)
+            if !isFlipped {
+                Image(systemName: "eye.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
+                    .foregroundColor(.black)
+                    .offset(x: 110, y: -65)
+            } else {
+                Image(systemName: imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
+                    .foregroundColor(.black)
+                    .offset(x: 110, y: -65)
+            }
+           Text("Знаю")
+                .offset(x:100, y: 60)
+           Image(systemName: "hand.draw")
+                .resizable()
+                .frame(width: 30, height: 30)
+                .offset(x:10, y: 60)
+           Text("Не знаю")
+                 .offset(x:-90, y: 60)
         }                .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
         
         .offset(x: offset.width, y: offset.height * 0.4)
@@ -60,7 +80,6 @@ struct CardSwiftUI: View {
                         swipeCard(width: offset.width)
                     }
                 }
-                
         )
     }
     
@@ -94,7 +113,7 @@ struct CardSwiftUI: View {
                 stuff.setupCard()
             }
         default:
-            color = .cyan
+            color = Color(.systemGray4)
         }
     }
 }
@@ -102,6 +121,6 @@ struct CardSwiftUI: View {
 
 struct CardSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        CardSwiftUI(words: ["hello":"hello"], stuff: Stuff(), indexOf: .constant(0) , rightCards: .constant(0) , wrongCards: .constant(0) )
+        CardSwiftUI(words: ["hello":"hello"], stuff: Stuff(), isFlipped: .constant(true), indexOf: .constant(0) , rightCards: .constant(0) , wrongCards: .constant(0), imageName: "eye" )
     }
 }
