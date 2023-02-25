@@ -28,7 +28,6 @@ class Stuff: ObservableObject  {
             setupCard()
         } else {
             indexOf = 0
-            quizIsFinished = true
         }
     }
     
@@ -63,7 +62,8 @@ struct QuizSwiftUI: View {
             Text(title).font(.title).bold()
                 .padding()
             ZStack {
-                    Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.black).font(.title2)
+                Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.blue).font(.title3)
+
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
                     CardSwiftUI(words: words,
                                 stuff: stuff,
@@ -71,10 +71,10 @@ struct QuizSwiftUI: View {
                                 rightCards: $stuff.rightCards,
                                 wrongCards: $stuff.wrongCards, imageName: isFlipped ? "eye.slash" : "eye.slash")
                         .onTapGesture {
-                            isFlipped.toggle()
-                            flipCard()
-                            stuff.translateIsShow.toggle()
-                            stuff.setupCard()
+                                isFlipped.toggle()
+                                flipCard()
+                                stuff.translateIsShow.toggle()
+                                stuff.setupCard()
                     }
                         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
                         .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
@@ -83,7 +83,8 @@ struct QuizSwiftUI: View {
         }
         .onAppear {
             stuff.setWordsIndexes(words: words)
-            stuff.setupCard()
+            stuff.indexOf = 1
+
         }
     }
         
