@@ -26,7 +26,7 @@ struct TopicsSwiftUI: View {
                         Text(topic.topicDescription.rawValue)
                             .font(.system(size: 20))
                             .frame(maxWidth:.infinity, alignment: .leading)
-                            .padding(25)
+                            .padding(20)
                             .foregroundColor(.black)
                         Spacer()
                     }

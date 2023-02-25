@@ -43,14 +43,14 @@ struct CardSwiftUI: View {
                     Image(systemName: "eye.fill")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 30, height: 30)
                         .foregroundColor(.white)
                         .offset(x: 110, y: -65)
                 } else {
                     Image(systemName: imageName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 30, height: 30)
                         .foregroundColor(.white).opacity(0.8)
                         .offset(x: 110, y: -65)
                 }

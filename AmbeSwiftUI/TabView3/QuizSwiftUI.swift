@@ -54,6 +54,7 @@ struct QuizSwiftUI: View {
     @State var contentRotation = 0.0
     @State var cardWord: String
     
+    @Environment(\.presentationMode) var presentationMode
     
     var learnedWordsCount = 0
     var title: String
@@ -64,7 +65,7 @@ struct QuizSwiftUI: View {
                 .padding()
             ZStack {
                 if stuff.quizIsFinished {
-                    Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.blue).font(.title3)}
+                    Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.black).font(.title3)}
 
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
                     CardSwiftUI(words: words,
@@ -82,6 +83,10 @@ struct QuizSwiftUI: View {
                         .rotation3DEffect(.degrees(cardRotation), axis: (x: 0, y: 1, z: 0))
                 }
             }
+            Button("Завершить") {
+                presentationMode.wrappedValue.dismiss()
+            }.buttonStyle(GrowingButton())
+                .padding(40)
         }
         .onAppear {
             stuff.setWordsIndexes(words: words)

@@ -25,7 +25,8 @@ struct Words: Identifiable {
             Words(title: "Глаголы 2", theme: Themes().secondVerbs, id: 7),
             Words(title: "Дом", theme: Themes().house, id: 8),
             Words(title: "Отель", theme: Themes().hotelWords, id: 9),
-            Words(title: "Продукты", theme: Themes().products, id: 10)
+            Words(title: "Продукты", theme: Themes().products, id: 10),
+            Words(title: "Части тела", theme: Themes().partsOfTheBody, id: 11)
         ]
     }
 }
@@ -220,7 +221,20 @@ struct Themes {
                 "Meet": "Встретить",
                 "Spend": "Тратить",
                 "Write": "Писать"
-                
+                 ]
+    let partsOfTheBody = [
+                "Head": "Голова",
+                "Leg": "Нога",
+                "Hand": "Рука",
+                "Heart": "Сердце",
+                "Brain": "Мозг",
+                "Back": "Спина",
+                "Knee": "Колено",
+                "Elbow": "Локоть",
+                "Eyes": "Глаза",
+                "Ears": "Уши",
+                "Nose": "Нос",
+                "Mouth": "Рот"
                  ]
     
     
