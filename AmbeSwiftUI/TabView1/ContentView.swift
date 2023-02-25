@@ -90,12 +90,11 @@ struct ContentView: View {
                             TextField("Ваш промокод", text: self.$inputText)
                                 .padding()
                             Button(action: {
-                                guard let url = URL(string: "https://www.instagram.com/deshar_school/") else { return }
+                                guard let url = URL(string: "https://ig.me/m/deshar_school") else { return }
                                 UIApplication.shared.open(url)
                             }) {
                                 Text("Получить код").bold()
-                            }
-                            Spacer()
+                            }.buttonStyle(GrowingButton())
                             Button("Подтвердить") {
                                 realmData.save(text: self.inputText)
                                 if inputText == promoCode {
@@ -105,8 +104,10 @@ struct ContentView: View {
                                 }
                                 isShowAlert = false
                             }
+                            .buttonStyle(GrowingButton())
                             .padding()
-                        }.frame(width: 400, height: 100)
+                        }.frame(width: 400, height: 400)
+                    Spacer()
                     }
                 }
 
