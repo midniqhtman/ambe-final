@@ -24,7 +24,7 @@ struct ContentView: View {
     @State private var isActive = [Bool](repeating: false, count: Topic.getTopics().count)
     @State private var cellEnabled = false
     
-    let promoCode = "Zubair"
+    let promoCode = "ambedeshar"
  
     var body: some View {
             TabView {
