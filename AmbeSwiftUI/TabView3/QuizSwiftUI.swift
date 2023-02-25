@@ -26,8 +26,9 @@ class Stuff: ObservableObject  {
             keyWord = Array(words.keys)[indexOf]
             valueWord = Array(words.values)[indexOf]
             setupCard()
-        } else {
-            indexOf = 0
+        }
+        else {
+            quizIsFinished = true
         }
     }
     
@@ -62,7 +63,8 @@ struct QuizSwiftUI: View {
             Text(title).font(.title).bold()
                 .padding()
             ZStack {
-                Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.blue).font(.title3)
+                if stuff.quizIsFinished {
+                    Text("\(stuff.rightCards) правильных ответов из \(words.count)").foregroundColor(.blue).font(.title3)}
 
                 ForEach(words.sorted(by: <), id: \.key) { word, translation in
                     CardSwiftUI(words: words,

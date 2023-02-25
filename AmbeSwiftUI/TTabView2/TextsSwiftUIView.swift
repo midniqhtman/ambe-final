@@ -17,7 +17,10 @@ struct TextsSwiftUIView: View {
                     EmbedView(videoID: "l9updbL58xY")
                         .frame(width:geometry.size.width, height: 200)
                         .background(Color.white)
-                    
+                    Text("Как учить тексты").font(.title).bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 25)
+                        
                     List(texts) { text in
                         NavigationLink(destination: FullTextSwiftUIView(text: text)) {
                             Text(text.title)
