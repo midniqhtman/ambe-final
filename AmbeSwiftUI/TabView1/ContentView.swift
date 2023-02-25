@@ -13,8 +13,9 @@ struct ContentView: View {
     let moduls = Topic.getTopics()
 //    var realm = try! Realm()
     @ObservedObject var realmData = RealmData()
-    
-    
+  
+    @FocusState var isInputActive: Bool
+  
     @State private var isShowAlert = false
     @State private var isShowModal = false
     @State private var isShowingLaunchScreen = true
@@ -78,7 +79,16 @@ struct ContentView: View {
                 }
                 .sheet(isPresented: $isShowAlert) {
                         VStack {
-                            Spacer()
+                                Text("Получить полный доступ")
+                                .font(.title)
+                                .bold()
+                            Text("Введите промокод чтобы получить пожизненный доступ ко всем урокам")
+                                .padding()
+                                .fixedSize(horizontal: false, vertical: true)
+                                .lineLimit(nil)
+                                .multilineTextAlignment(.center)
+                            TextField("Ваш промокод", text: self.$inputText)
+                                .padding()
                             Button(action: {
                                 guard let url = URL(string: "https://www.instagram.com/deshar_school/") else { return }
                                 UIApplication.shared.open(url)
@@ -86,11 +96,7 @@ struct ContentView: View {
                                 Text("Получить код").bold()
                             }
                             Spacer()
-                            Text("Введите ваш промокод")
-                            TextField("Ваш промокод", text: self.$inputText)
-                                .padding()
-                            Spacer()
-                            Button("ОК") {
+                            Button("Подтвердить") {
                                 realmData.save(text: self.inputText)
                                 if inputText == promoCode {
                                     cellEnabled = true
@@ -100,7 +106,7 @@ struct ContentView: View {
                                 isShowAlert = false
                             }
                             .padding()
-                        }.frame(width: 200, height: 100)
+                        }.frame(width: 400, height: 100)
                     }
                 }
 
@@ -134,4 +140,5 @@ struct tableViewCell: View {
             .shadow(color: .black, radius: 5)
     }
 }
+
 

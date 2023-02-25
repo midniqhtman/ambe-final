@@ -91,7 +91,7 @@ struct CardSwiftUI: View {
     func swipeCard(width: CGFloat) {
         switch width {
         case -500...(-150):
-            offset = CGSize(width: -500, height: 0)
+            offset = CGSize(width: -5000, height: 0)
             self.indexOf += 1
         case 150...500:
             offset = CGSize(width: 500, height: 0)
