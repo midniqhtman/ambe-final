@@ -17,6 +17,7 @@ struct TopicsSwiftUI: View {
                     EmbedFrameView(topic: topic)
                         .frame(width: geometry.size.width, height: 210)
                     EmbedView(videoID: topic.youtubeurl.rawValue)
+                    
                     Text(topic.title).font(.title2).bold()
                         .frame(maxWidth:.infinity, alignment: .leading)
                         .padding(.leading, 25)

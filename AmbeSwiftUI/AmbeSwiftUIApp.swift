@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct AmbeSwiftUIApp: App {
-
     var body: some Scene {
         WindowGroup {
             SplashScreenUIView()
+//                .environment(\.colorScheme, .light)
         }
     }
 }
