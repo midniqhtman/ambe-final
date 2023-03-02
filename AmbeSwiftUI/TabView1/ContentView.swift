@@ -39,12 +39,15 @@ struct ContentView: View {
                                         ZStack {
                                             tableViewCell()
                                             Text("Урок" +  " \(modul.id + 1)." + " " + modul.title)
-                                                .foregroundColor(.white).bold().font(Font.title2).shadow(color:.white,radius: 10)
+                                                .padding()
+                                                .foregroundColor(.white).bold().font(Font.title3)
                                                 .navigationBarTitle("Начальный курс")
                                         }
                                     }
+                                    
                                 }
                             }
+                            .listRowSeparator(Visibility.hidden)
                             .onAppear {
                                     if inputCode == promoCode {
                                         cellEnabled = true
@@ -103,7 +106,7 @@ struct ContentView: View {
                                 }
                                 isShowAlert = false
                             }
-                            .buttonStyle(GrowingButton())
+                            .buttonStyle(ActionButton())
                             .padding()
                         }.frame(width: 400, height: 400)
                     Spacer()
@@ -118,8 +121,6 @@ struct ContentView: View {
                 .tabItem { Label("Тексты", systemImage: "books.vertical") }
                                 ExercisesSwiftUIView()
                 .tabItem { Label("Слова", systemImage: "highlighter")}
-                                AboutUsSwiftUI()
-                .tabItem { Label("О нас", systemImage: "info.circle")}
                             }
                         }
                     }
@@ -139,7 +140,7 @@ struct tableViewCell: View {
             .frame(height: 80)
             .cornerRadius(20)
             .foregroundColor(.blue)
-            .shadow(color: .black, radius: 5)
+            .shadow(color: .black, radius: 3)
     }
 }
 

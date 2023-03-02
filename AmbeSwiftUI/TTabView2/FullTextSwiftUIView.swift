@@ -166,7 +166,6 @@ struct GrowingButton: ButtonStyle {
 struct ActionButton: ButtonStyle {
  func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(height: 50)
             .padding()
             .background(Color(.systemBlue))
             .foregroundColor(.white)

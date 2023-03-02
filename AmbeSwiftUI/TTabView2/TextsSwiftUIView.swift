@@ -23,12 +23,17 @@ struct TextsSwiftUIView: View {
                     List(texts) { text in
                         NavigationLink(destination: FullTextSwiftUIView(text: text)) {
                             Text(text.title)
-                        }
+                            
+                        }.listSectionSeparator(Visibility.hidden)
+                        
                         .foregroundColor(.black)
                         .listRowSeparator(.visible)
+                        
                     }
+                    
                     .navigationTitle("Тексты")
                 }
+                
             }
         }
     }

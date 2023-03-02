@@ -37,7 +37,6 @@
 		0838FA3B29A7F57500D40E86 /* SplashScreenUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838FA3A29A7F57500D40E86 /* SplashScreenUIView.swift */; };
 		0838FA3D29A80C7700D40E86 /* Семья.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0838FA3C29A80C7700D40E86 /* Семья.m4a */; };
 		0840C1A329AAAD2200A7C724 /* Части тела.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0840C1A229AAAD2200A7C724 /* Части тела.m4a */; };
-		0862013A29B01C6C00411E22 /* AboutUsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862013929B01C6C00411E22 /* AboutUsSwiftUI.swift */; };
 		0883A4662970CC4900CB6CC5 /* WordsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */; };
 		0885AF6E29621E860058957F /* AmbeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */; };
 		0885AF7029621E860058957F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6F29621E860058957F /* ContentView.swift */; };
@@ -86,7 +85,6 @@
 		0838FA3A29A7F57500D40E86 /* SplashScreenUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUIView.swift; sourceTree = "<group>"; };
 		0838FA3C29A80C7700D40E86 /* Семья.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Семья.m4a"; sourceTree = "<group>"; };
 		0840C1A229AAAD2200A7C724 /* Части тела.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Части тела.m4a"; sourceTree = "<group>"; };
-		0862013929B01C6C00411E22 /* AboutUsSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsSwiftUI.swift; sourceTree = "<group>"; };
 		0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSwiftUIView.swift; sourceTree = "<group>"; };
 		0885AF6A29621E860058957F /* Учи английский с Deshar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Учи английский с Deshar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbeSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				0885AF6F29621E860058957F /* ContentView.swift */,
-				0862013929B01C6C00411E22 /* AboutUsSwiftUI.swift */,
 				08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */,
 				0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */,
 			);
@@ -345,7 +342,6 @@
 			files = (
 				08014105296F765800F2CDDD /* ExercisesSwiftUIView.swift in Sources */,
 				0838FA3B29A7F57500D40E86 /* SplashScreenUIView.swift in Sources */,
-				0862013A29B01C6C00411E22 /* AboutUsSwiftUI.swift in Sources */,
 				081B92172998359500F38654 /* RealmDatabase.swift in Sources */,
 				08E83FAC297C851400F74DF2 /* CardSwiftUI.swift in Sources */,
 				0801410B296F81F600F2CDDD /* FullTextSwiftUIView.swift in Sources */,
@@ -495,7 +491,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmbeSwiftUI/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = AmbeDeshar;
+				INFOPLIST_KEY_CFBundleDisplayName = Deshar;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -527,7 +523,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmbeSwiftUI/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = AmbeDeshar;
+				INFOPLIST_KEY_CFBundleDisplayName = Deshar;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

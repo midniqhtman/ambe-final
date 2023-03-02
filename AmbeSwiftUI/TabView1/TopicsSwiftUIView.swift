@@ -15,10 +15,10 @@ struct TopicsSwiftUI: View {
             ScrollView {
                 VStack {
                     EmbedFrameView(topic: topic)
-                        .frame(width: geometry.size.width, height: 210)
+                        .frame(width: geometry.size.width, height: 200)
                     EmbedView(videoID: topic.youtubeurl.rawValue)
                     
-                    Text(topic.title).font(.title2).bold()
+                    Text(topic.title).font(.title).bold()
                         .frame(maxWidth:.infinity, alignment: .leading)
                         .padding(.leading, 25)
                     
@@ -31,7 +31,7 @@ struct TopicsSwiftUI: View {
                             .foregroundColor(.black)
                         Spacer()
                     }
-                    Text("Важно").font(.title2).bold()
+                    Text("❗️Важно").font(.title2).bold()
                         .frame(maxWidth:.infinity, alignment: .leading)
                         .padding(.leading, 25)
                     

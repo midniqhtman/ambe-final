@@ -164,15 +164,15 @@ enum TopicsDescriptions: String {
     case presentSimpleDescription = """
     Настоящее время (Present Simple) указывает на то что мы делаем повседневно.
     
-    Например:
-    -Я живу в Калифорнии - I live in California,
+    ✅Например:
+    Я живу в Калифорнии - I live in California,
     Я работаю в Италии - I work in Italy.
     
-    -Чтобы задать вопрос мы используем дополнительное слово DO.
+    ❓Чтобы задать вопрос мы используем дополнительное слово DO.
     Do you work in office? - Ты работаешь в офисе?
     Do you need help? = Тебе нужна помощь?
     
-    -Чтобы задать отрицание мы используем слово DON'T (DO NOT)
+    ❌Чтобы задать отрицание мы используем слово DON'T (DO NOT)
     I don't like coffee - Я не люблю кофе
     They don't learn Spanish - Они не учат испанский
     """
@@ -223,35 +223,35 @@ enum TopicsDescriptions: String {
     Будущее время (Future Simple) указывает на то что мы сделаем в будущем.
     Образуется путем добавления дополнительного слова WILL
         
-    Например:
-    -Я буду играть - I will play,
+    ✅Например:
+    Я буду играть - I will play,
     Мы купим новую квартиру - We will buy new flat.
         
-    -Чтобы задать вопрос слово WILL ставим в начало предложения.
+    ❓Чтобы задать вопрос слово WILL ставим в начало предложения.
     Will you eat this cake? - Ты съешь этот торт?
     Will they come tomorrow? = Они придут завтра?
         
-    -Чтобы задать отрицание мы используем слово WON'T (WILL NOT)
+    ❌Чтобы задать отрицание мы используем слово WON'T (WILL NOT)
     I won't delete this app - Я не удалю это приложение
     He won't fail me - Он не подведет меня
     
     Если в предложении нет действия, мы просто используем WILL BE - Буду
     Например:
-    -Я буду в Италии завтра - I will be in Italy tomorrow
+    Я буду в Италии завтра - I will be in Italy tomorrow
     """
     case pastSimple = """
     Прошедшее время (Past Simple) указывает на то что мы сделали в прошлом.
     Образуется путем добавления дополнительного окончание ED к глаголу
         
     Например:
-    -Я жил в Германии - I lived in Germany
+    ✅Я жил в Германии - I lived in Germany
     Мы выучили английский - We learned English
         
-    -Чтобы задать вопрос слово Did ставим в начало предложения.
+    ❓Чтобы задать вопрос слово Did ставим в начало предложения.
     Did you eat this cake? - Ты съел этот торт?
     Did they come yesterday? = Они пришли вчера?
         
-    -Чтобы задать отрицание мы используем слово DIDN'T (DID NOT)
+    ❌Чтобы задать отрицание мы используем слово DIDN'T (DID NOT)
     I didn't see you in the park - Я не видел тебя в парке
     He didn't know Jason - Он не знал Джейсона
     
