@@ -34,8 +34,8 @@ struct Topic: Identifiable {
             Topic(id: 2, title: "Глагол To be", topicDescription: .toBe, importantStuff: .tobeImportant, youtubeurl: .toBeUrl),
             Topic(id: 3, title: "Будущее время", topicDescription: .futureSimple, importantStuff: .futureSimpleImportant, youtubeurl: .futureSimpleUrl),
             Topic(id: 4, title: "Прошешдшее время", topicDescription: .pastSimple, importantStuff: .pastSimpleImportant, youtubeurl: .pastSimpleUrl),
-            Topic(id: 5, title: "Прилагательные", topicDescription: .adjectivs, importantStuff: .adjectives, youtubeurl: .adjectivesUrl),
-            Topic(id: 6, title: "Притяжательный падеж", topicDescription: .possessiveCase, importantStuff: .possessiveCase, youtubeurl: .posessiveCaseUrl),
+            Topic(id: 5, title: "Притяжательный падеж", topicDescription: .possessiveCase, importantStuff: .possessiveCase, youtubeurl: .posessiveCaseUrl),
+            Topic(id: 6, title: "Прилагательные", topicDescription: .adjectivs, importantStuff: .adjectives, youtubeurl: .adjectivesUrl),
             Topic(id: 7, title: "Объектные местоимения", topicDescription: .objectivePronouns, importantStuff:.objectivePronouns, youtubeurl: .objectivePronounsUrl),
             Topic(id: 8, title: "Модальные глаголы", topicDescription: .ModalVerbs, importantStuff: .modalVerbs, youtubeurl: .modalVerbsUrl),
             Topic(id: 9, title: "Артикли", topicDescription: .articles, importantStuff: .articles, youtubeurl: .articlesUrl)
@@ -51,7 +51,7 @@ enum YoutubeURL: String {
     case toBeUrl = "rLLmTPpydws&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=6"
     case modalVerbsUrl = "CzPEAe8Q_Yg&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=1"
     case adjectivesUrl = "Eu3t2zRh5mI&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=3"
-    case posessiveCaseUrl = "gZE0DdpwRew3"
+    case posessiveCaseUrl = "4SWmyVdGm3c&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=6&t=4s"
     case objectivePronounsUrl = "jjWABQqpTcg&list=PLGIOzMmxwHV1eIJ9kRdBROx0xjRGBboMU&index=3"
     case articlesUrl = "gZE0DdpwRew5"
 }

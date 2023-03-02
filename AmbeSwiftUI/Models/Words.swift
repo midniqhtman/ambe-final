@@ -26,7 +26,13 @@ struct Words: Identifiable {
             Words(title: "Дом", theme: Themes().house, id: 8),
             Words(title: "Отель", theme: Themes().hotelWords, id: 9),
             Words(title: "Продукты", theme: Themes().products, id: 10),
-            Words(title: "Части тела", theme: Themes().partsOfTheBody, id: 11)
+            Words(title: "Части тела", theme: Themes().partsOfTheBody, id: 11),
+            Words(title: "Неправильные глаголы", theme: Themes().irregularVerbs, id: 12),
+            Words(title: "Время", theme: Themes().frequency, id: 13),
+            Words(title: "Предлоги", theme: Themes().consAndPreps, id: 14),
+            Words(title: "Притяжательные местоимения", theme: Themes().possessive, id: 15),
+            Words(title: "Объектные местоимения", theme: Themes().objective, id: 16),
+            Words(title: "Вопросы", theme: Themes().questions, id: 17)
         ]
     }
 }
@@ -235,6 +241,77 @@ struct Themes {
                 "Ears": "Уши",
                 "Nose": "Нос",
                 "Mouth": "Рот"
+                 ]
+    let irregularVerbs = [
+                "Go-Went": "Ходить",
+                "See-Saw": "Видеть",
+                "Think-Thought": "Думать",
+                "Buy-Bought": "Покупать",
+                "Do-Did": "Делать",
+                "Meet-Met": "Встречать",
+                "Give-Gave": "Давать",
+                "Take-Took": "Брать",
+                "Come-Came": "Приходить",
+                "Get-Got": "Получать"
+                 ]
+    let frequency = [
+                "Always": "Всегда",
+                "Sometimes": "Иногда",
+                "Often": "Часто",
+                "Hardly ever": "Почти никогда",
+                "Never": "Никогда",
+                "Seldom": "Редко",
+                "Rarely": "Редко",
+                "Yet": "Пока что",
+                "Till": "До тех пор",
+                "Since": "С тех пор",
+                "Already": "Уже",
+                "Again": "Снова",
+                "Almost": "Почти",
+                "At last": "Наконец",
+                "At first": "Сначала",
+                "Still": "Все еще"
+                ]
+    let consAndPreps = [
+                "In": "В",
+                "On": "На",
+                "From": "Из/От",
+                "For": "Для/За",
+                "About": "О",
+                "Without": "Без",
+                "With": "С",
+                "At": "Местоположение",
+                "To": "Направление",
+                "And": "И/А",
+                "Or": "Или",
+                "But": "Но/Кроме"
+                 ]
+    let possessive = [
+                "My": "Мое",
+                "Your": "Твое",
+                "His": "Его",
+                "Her": "Её",
+                "Our": "Наше",
+                "Their": "Их"
+                 ]
+    let objective = [
+                "Me": "Мне",
+                "You": "Тебе",
+                "Him": "Ему",
+                "Her": "Ей",
+                "Us": "Нам/Нас",
+                "Them": "Им/Их"
+                 ]
+    let questions = [
+                "What": "Что/Какой",
+                "Who": "Кто",
+                "Why": "Почему",
+                "Where": "Где",
+                "When": "Когда",
+                "How": "Как",
+                "How many": "Сколько",
+                "How long": "Как долго",
+                "Which": "Который"
                  ]
     
     

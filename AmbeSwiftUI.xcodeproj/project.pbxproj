@@ -11,6 +11,12 @@
 		08014105296F765800F2CDDD /* ExercisesSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08014104296F765800F2CDDD /* ExercisesSwiftUIView.swift */; };
 		08014109296F77FD00F2CDDD /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08014108296F77FD00F2CDDD /* Words.swift */; };
 		0801410B296F81F600F2CDDD /* FullTextSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */; };
+		0805CD0329AC02D100477038 /* Время.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0805CD0129AC02D100477038 /* Время.m4a */; };
+		0805CD0429AC02D100477038 /* Неправильные глаголы.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0805CD0229AC02D100477038 /* Неправильные глаголы.m4a */; };
+		0805CD0929ACF23B00477038 /* Объектные местоимения.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0805CD0629ACF23B00477038 /* Объектные местоимения.m4a */; };
+		0805CD0A29ACF23B00477038 /* Предлоги.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0805CD0729ACF23B00477038 /* Предлоги.m4a */; };
+		0805CD0C29ACF96E00477038 /* Вопросы.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0805CD0B29ACF96E00477038 /* Вопросы.m4a */; };
+		0805CD0E29ACF9CA00477038 /* Притяжательные местоимения.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0805CD0D29ACF9C900477038 /* Притяжательные местоимения.m4a */; };
 		08081D0D2968C7ED00B91334 /* EmbedSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */; };
 		0814949D2979FA6200C0AEE7 /* QuizSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */; };
 		08153DDD2985D43F0019071E /* Armando.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 08153DDC2985D43F0019071E /* Armando.m4a */; };
@@ -31,6 +37,7 @@
 		0838FA3B29A7F57500D40E86 /* SplashScreenUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838FA3A29A7F57500D40E86 /* SplashScreenUIView.swift */; };
 		0838FA3D29A80C7700D40E86 /* Семья.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0838FA3C29A80C7700D40E86 /* Семья.m4a */; };
 		0840C1A329AAAD2200A7C724 /* Части тела.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0840C1A229AAAD2200A7C724 /* Части тела.m4a */; };
+		0862013A29B01C6C00411E22 /* AboutUsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862013929B01C6C00411E22 /* AboutUsSwiftUI.swift */; };
 		0883A4662970CC4900CB6CC5 /* WordsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */; };
 		0885AF6E29621E860058957F /* AmbeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */; };
 		0885AF7029621E860058957F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0885AF6F29621E860058957F /* ContentView.swift */; };
@@ -53,6 +60,12 @@
 		08014104296F765800F2CDDD /* ExercisesSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesSwiftUIView.swift; sourceTree = "<group>"; };
 		08014108296F77FD00F2CDDD /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		0801410A296F81F600F2CDDD /* FullTextSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTextSwiftUIView.swift; sourceTree = "<group>"; };
+		0805CD0129AC02D100477038 /* Время.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Время.m4a"; sourceTree = "<group>"; };
+		0805CD0229AC02D100477038 /* Неправильные глаголы.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Неправильные глаголы.m4a"; sourceTree = "<group>"; };
+		0805CD0629ACF23B00477038 /* Объектные местоимения.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Объектные местоимения.m4a"; sourceTree = "<group>"; };
+		0805CD0729ACF23B00477038 /* Предлоги.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Предлоги.m4a"; sourceTree = "<group>"; };
+		0805CD0B29ACF96E00477038 /* Вопросы.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Вопросы.m4a"; sourceTree = "<group>"; };
+		0805CD0D29ACF9C900477038 /* Притяжательные местоимения.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Притяжательные местоимения.m4a"; sourceTree = "<group>"; };
 		08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbedSwiftUIView.swift; sourceTree = "<group>"; };
 		0814949C2979FA6200C0AEE7 /* QuizSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSwiftUI.swift; sourceTree = "<group>"; };
 		08153DDC2985D43F0019071E /* Armando.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armando.m4a; sourceTree = "<group>"; };
@@ -73,6 +86,7 @@
 		0838FA3A29A7F57500D40E86 /* SplashScreenUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUIView.swift; sourceTree = "<group>"; };
 		0838FA3C29A80C7700D40E86 /* Семья.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Семья.m4a"; sourceTree = "<group>"; };
 		0840C1A229AAAD2200A7C724 /* Части тела.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Части тела.m4a"; sourceTree = "<group>"; };
+		0862013929B01C6C00411E22 /* AboutUsSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsSwiftUI.swift; sourceTree = "<group>"; };
 		0883A4652970CC4900CB6CC5 /* WordsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSwiftUIView.swift; sourceTree = "<group>"; };
 		0885AF6A29621E860058957F /* Учи английский с Deshar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Учи английский с Deshar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885AF6D29621E860058957F /* AmbeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbeSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -154,6 +168,12 @@
 		08A69C1A29888088000D5A6E /* audiofiles */ = {
 			isa = PBXGroup;
 			children = (
+				0805CD0D29ACF9C900477038 /* Притяжательные местоимения.m4a */,
+				0805CD0B29ACF96E00477038 /* Вопросы.m4a */,
+				0805CD0629ACF23B00477038 /* Объектные местоимения.m4a */,
+				0805CD0729ACF23B00477038 /* Предлоги.m4a */,
+				0805CD0129AC02D100477038 /* Время.m4a */,
+				0805CD0229AC02D100477038 /* Неправильные глаголы.m4a */,
 				0840C1A229AAAD2200A7C724 /* Части тела.m4a */,
 				08EA77722993110B00D2EA6F /* At the hospital.m4a */,
 				08EA77782993122500D2EA6F /* Bird Island.m4a */,
@@ -203,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				0885AF6F29621E860058957F /* ContentView.swift */,
+				0862013929B01C6C00411E22 /* AboutUsSwiftUI.swift */,
 				08081D0C2968C7ED00B91334 /* EmbedSwiftUIView.swift */,
 				0885AF7D29624A120058957F /* TopicsSwiftUIView.swift */,
 			);
@@ -289,19 +310,25 @@
 				081B920A29971CF900F38654 /* Отель.m4a in Resources */,
 				081B920D29971CF900F38654 /* Месяцы.m4a in Resources */,
 				081B91FA2997180500F38654 /* Trip to Germany.m4a in Resources */,
+				0805CD0929ACF23B00477038 /* Объектные местоимения.m4a in Resources */,
 				081B921329971CF900F38654 /* Первые глаголы.m4a in Resources */,
 				0885AF7229621E880058957F /* Assets.xcassets in Resources */,
+				0805CD0E29ACF9CA00477038 /* Притяжательные местоимения.m4a in Resources */,
 				08EA77742993110B00D2EA6F /* John and Jim.m4a in Resources */,
 				081B920E29971CF900F38654 /* Продукты.m4a in Resources */,
+				0805CD0C29ACF96E00477038 /* Вопросы.m4a in Resources */,
 				081B91FC2997180A00F38654 /* At the restaraunt.m4a in Resources */,
 				081B920B29971CF900F38654 /* Одежда.m4a in Resources */,
 				08EA77792993122500D2EA6F /* Bird Island.m4a in Resources */,
 				08EA77752993110B00D2EA6F /* The perfect day.m4a in Resources */,
+				0805CD0A29ACF23B00477038 /* Предлоги.m4a in Resources */,
 				081B921229971CF900F38654 /* Аэропорт.m4a in Resources */,
 				08153DDD2985D43F0019071E /* Armando.m4a in Resources */,
+				0805CD0429AC02D100477038 /* Неправильные глаголы.m4a in Resources */,
 				08EA77762993110B00D2EA6F /* At the hospital.m4a in Resources */,
 				081B921429971CF900F38654 /* Прилагательные.m4a in Resources */,
 				08EA77772993110B00D2EA6F /* My hobby.m4a in Resources */,
+				0805CD0329AC02D100477038 /* Время.m4a in Resources */,
 				0840C1A329AAAD2200A7C724 /* Части тела.m4a in Resources */,
 				081B91FE2997181500F38654 /* Migel.m4a in Resources */,
 				0838FA3D29A80C7700D40E86 /* Семья.m4a in Resources */,
@@ -318,6 +345,7 @@
 			files = (
 				08014105296F765800F2CDDD /* ExercisesSwiftUIView.swift in Sources */,
 				0838FA3B29A7F57500D40E86 /* SplashScreenUIView.swift in Sources */,
+				0862013A29B01C6C00411E22 /* AboutUsSwiftUI.swift in Sources */,
 				081B92172998359500F38654 /* RealmDatabase.swift in Sources */,
 				08E83FAC297C851400F74DF2 /* CardSwiftUI.swift in Sources */,
 				0801410B296F81F600F2CDDD /* FullTextSwiftUIView.swift in Sources */,
@@ -463,10 +491,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AmbeSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = U5GTXVYV6H;
+				DEVELOPMENT_TEAM = HB7JN224NF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmbeSwiftUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AmbeDeshar;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,7 +507,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = chechen.AmbeSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = oleksandr.deshar;
 				PRODUCT_NAME = "Учи английский с Deshar";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -494,10 +523,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AmbeSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = U5GTXVYV6H;
+				DEVELOPMENT_TEAM = HB7JN224NF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmbeSwiftUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AmbeDeshar;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -509,7 +539,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = chechen.AmbeSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = oleksandr.deshar;
 				PRODUCT_NAME = "Учи английский с Deshar";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

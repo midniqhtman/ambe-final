@@ -21,7 +21,7 @@ struct WordsSwiftUIView: View {
     
     var body: some View {
             VStack {
-                Text(title).font(.largeTitle).bold()
+                Text(title).font(.largeTitle).bold().padding()
                 HStack {
                     Button(action: { rewind(5)}) {
                         Label("5", systemImage: "arrow.counterclockwise")

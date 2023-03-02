@@ -11,7 +11,6 @@ import RealmSwift
 struct ContentView: View {
     
     let moduls = Topic.getTopics()
-//    var realm = try! Realm()
     @ObservedObject var realmData = RealmData()
   
     @FocusState var isInputActive: Bool
@@ -24,7 +23,7 @@ struct ContentView: View {
     @State private var isActive = [Bool](repeating: false, count: Topic.getTopics().count)
     @State private var cellEnabled = false
     
-    let promoCode = "ambedeshar"
+    let promoCode = "Ambedeshar772322"
  
     var body: some View {
             TabView {
@@ -119,6 +118,8 @@ struct ContentView: View {
                 .tabItem { Label("Тексты", systemImage: "books.vertical") }
                                 ExercisesSwiftUIView()
                 .tabItem { Label("Слова", systemImage: "highlighter")}
+                                AboutUsSwiftUI()
+                .tabItem { Label("О нас", systemImage: "info.circle")}
                             }
                         }
                     }

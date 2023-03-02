@@ -163,6 +163,19 @@ struct GrowingButton: ButtonStyle {
     }
 }
 
+struct ActionButton: ButtonStyle {
+ func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(height: 50)
+            .padding()
+            .background(Color(.systemBlue))
+            .foregroundColor(.white)
+            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+    }
+}
+
 struct AudioPlayer {
     
 }
